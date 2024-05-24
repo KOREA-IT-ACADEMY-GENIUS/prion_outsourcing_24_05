@@ -4,7 +4,7 @@
 <html data-theme="light">
 <head>
 <meta charset="UTF-8">
-<title>${pageTitle }</title>
+<title>Prion | ${pageTitle }</title>
 <link rel="stylesheet" href="/resource/common.css" />
 <script src="/resource/common.js" defer="defer"></script>
 <!-- 테일윈드 불러오기 -->
@@ -67,9 +67,9 @@ body {
 }
 
 .top_bar > .con > .menu_box_1 > ul > li > a {
-  font-weight: bold;
+  font-weight: 600;
   color: #1e1e1e;
-  font-size: 17px;
+  font-size: 14px;
   padding: 0 10px;
   position: relative;
 }
@@ -89,6 +89,10 @@ body {
 .top_bar > .con > .menu_box_1 > ul > li:hover > a::after {
   width: 100%;
   background-color: #4DBF5E;
+}
+
+.menu_box_1 {
+
 }
 
 
