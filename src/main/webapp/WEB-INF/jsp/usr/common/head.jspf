@@ -8,7 +8,6 @@
 <link rel="stylesheet" href="/resource/common.css" />
 <script src="/resource/common.js" defer="defer"></script>
 <!-- 테일윈드 불러오기 -->
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" /> -->
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
 
 <!-- daisy ui 불러오기 -->
@@ -20,67 +19,108 @@
 <!-- 제이쿼리 불러오기 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
+
+
+
 <script>
-  // 테마를 전환하는 함수
-  function Theme__toggle() {
-    const theme = localStorage.getItem('theme') ?? 'light';
+console.clear();
 
-    if (theme == 'light') {
-      localStorage.setItem('theme', 'dark');
-      Theme__applyTo('dark'); // 테마를 어두운 테마로 설정
-    } else {
-      localStorage.setItem('theme', 'light');
-      Theme__applyTo('light'); // 테마를 밝은 테마로 설정
-    }
-  }
+function TopBar__init() {
+  $(".top_bar .menu_box_1 > ul > li").mouseover(function () {
+    var $height = $(this).find("> ul").height();
+    var height_plus = $height + 30;
 
-  // 특정 테마를 적용하는 함수
-  function Theme__applyTo(themeName) {
-    $('html').attr('data-theme', themeName);
-  }
-
-  // 초기 테마 설정 함수
-  function Theme__init() {
-    const theme = localStorage.getItem('theme') ?? 'light';
-    Theme__applyTo(theme);
-  }
-
-  // 문서 로드 완료 시 초기 테마 설정
-  $(document).ready(function () {
-    Theme__init();
+    $(".bg").css("height", height_plus + "px");
   });
+
+  $(".top_bar .menu_box_1 > ul > li").mouseleave(function () {
+    $(".bg").css("height", "0px");
+  });
+}
+
+TopBar__init();
+
 </script>
+
+<style>
+/* 커스텀 */
+.con {
+  max-width: 95%;
+  justify-content: space-between;
+}
+
+body {
+  height: 10000px;
+}
+
+/* 탑바 */
+.top_bar {
+  height: 80px; /*임시*/
+  background-color: white; /*임시*/
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  border-bottom-style: solid;
+  border-bottom-color: #e9e9e9;
+  border-bottom-width: 1px;
+}
+
+.top_bar > .con > .menu_box_1 > ul > li > a {
+  font-weight: bold;
+  color: #1e1e1e;
+  font-size: 17px;
+  padding: 0 10px;
+  position: relative;
+}
+
+/* 1차메뉴 아이템 아래 막대기 */
+.top_bar > .con > .menu_box_1 > ul > li > a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: transparent;
+  transition: background-color 0.3s, width 0.3s;
+}
+
+.top_bar > .con > .menu_box_1 > ul > li:hover > a::after {
+  width: 100%;
+  background-color: #4DBF5E;
+}
+
+
+</style>
+
+
 </head>
 <body>
 
-	<header>
-		<div class="h-20 flex mx-auto items-center text-3xl">
-			<a href="/">LOGO</a>
-			<div class="flex-grow"></div>
-			<ul class="flex">
-				<li class=""><a class="h-full px-3 flex items-center btn-theme-toggle" href="javascript:Theme__toggle();">
-						<span>🌞</span>
-						<span>🌚</span>
-					</a></li>
-				<li><a class="hover:underline" href="/">HOME</a></li>
-				<li><a class="hover:underline" href="../article/list?boardId=1&page=1">LIST</a>
-					<ul>
-						<li><a class="hover:underline" href="../article/list?boardId=1&page=1">NOTICE</a></li>
-						<li><a class="hover:underline" href="../article/list?boardId=2&page=1">FREE</a></li>
-						<li><a class="hover:underline" href="../article/list?boardId=3&page=1">QnA</a></li>
-					</ul></li>
-				<c:if test="${!rq.isLogined() }">
-					<li><a class="hover:underline" href="${rq.loginUri }">LOGIN</a></li>
-					<li><a class="hover:underline" href="../member/join">JOIN</a></li>
-				</c:if>
-				<c:if test="${rq.isLogined() }">
-					<li><a class="hover:underline" href="../article/write">WRITE</a></li>
-					<li class="hover:underline"><a class="h-full px-3 flex items-center" href="/usr/member/myPage">MYPAGE</a></li>
-					<li><a onclick="if(confirm('로그아웃 할래?') == false) return false;" class="hover:underline"
-							href="${rq.logoutUri }">LOGOUT</a></li>
-				</c:if>
-			</ul>
-		</div>
-	</header>
-	<h1 style="font-size: 2rem;">${pageTitle }</h1>
-	<hr />
+<div class="top_bar">
+  <div class="con height-100p flex flex-jc-sb">
+    <a href="#" class="logo flex flex-ai-c">
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6b7fa0af06a2bf0f8148530d0a50ef572bef8e92b51dc7dc15c9c2fc46b39696?apiKey=725f06f0daeb4ab382150ea4b4cf3550&" alt="" style ="height: 50px;">
+    </a>
+    <nav class="menu_box_1">
+      <ul class="height-100p flex">
+
+        <li>
+          <a href="#" class="flex flex-ai-c height-100p " ">ABOUT</a>
+        </li>
+        <li>
+          <a href="#" class="flex flex-ai-c height-100p"">PRODUCT</a>
+        </li>
+        <li>
+          <a href="#" class="flex flex-ai-c height-100p" ">WORKING PROCESS</a>
+        </li>
+        <li>
+          <a href="#" class="flex flex-ai-c height-100p" ">CONTACT US</a>
+        </li>
+      </ul>
+      <div class="bg"></div>
+    </nav>
+  </div>
+</div>
+
