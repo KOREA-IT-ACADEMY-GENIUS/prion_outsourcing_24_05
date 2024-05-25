@@ -20,12 +20,16 @@ public class UsrHomeController {
 		return "redirect:/usr/home/main";
 	}
 
-	
 	@RequestMapping("/usr/home/about")
 	public String about() {
 
 		return "/usr/home/about";
 	}
-	
-	
+
+	@RequestMapping("/usr/home/contact")
+	public String showContact() {
+
+		return "/usr/home/contact";
+	}
+
 }
