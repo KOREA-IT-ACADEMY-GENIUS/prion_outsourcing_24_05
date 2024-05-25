@@ -4,8 +4,32 @@
 
 <%@ include file="../common/head.jspf"%>
 
-<section class="main-section">
+
   <style>
+  
+  /* 모달창 */
+.modal {
+    display: none;
+    z-index: 999;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 500px;
+    left: 500px;
+/*     background-color: rgba(0, 0, 0, 0.8); */
+}
+
+.modalBox {
+    position: relative;
+    text-align: center;
+    top : 15%;
+    left : 30%;
+    width: 50%;
+    max-height: 50%;
+    position : absolute;
+    z-index: 999 ;
+}
+  
     .main-section {
       background-color: #fff;
       display: flex;
@@ -296,8 +320,26 @@ img {
   object-fit: cover;
 }
 
+
+
   </style>
 
+
+<script>
+$(function(){
+    // 이미지 클릭시 해당 이미지 모달
+    $(".img").click(function(){
+        let img = new Image();
+        img.src = $(this).attr("src")
+        $('.modalBox').html(img);
+        $(".modal").show();
+    });
+    // 모달 클릭할때 이미지 닫음
+    $(".modal").click(function (e) {
+    	$(".modal").toggle();
+    });
+});
+</script>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
@@ -348,6 +390,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 </script>
 
+	<div class="modal">
+    <div class="modalBox"></div>
+</div>
+<section class="main-section">
 <div class="content-container">
     <h1 class="heading">PRODUCT/SERVICE</h1>
     <div class="service-options">
@@ -370,19 +416,19 @@ document.addEventListener("DOMContentLoaded", function() {
       <div class="image-row">
         <div class="image-column">
           <div class="image-wrapper">
-            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <img src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image img" />
             <div class="image-description">텍스트1</div>
           </div>
         </div>
         <div class="image-column">
           <div class="image-wrapper">
-            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image img" />
             <div class="image-description">텍스트2</div>
           </div>
         </div>
         <div class="image-column">
           <div class="image-wrapper">
-            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image img" />
             <div class="image-description">텍스트3</div>
           </div>
         </div>
@@ -639,3 +685,4 @@ document.addEventListener("DOMContentLoaded", function() {
 </div>
 </section>
 
+<%@ include file="../common/foot.jspf"%>
