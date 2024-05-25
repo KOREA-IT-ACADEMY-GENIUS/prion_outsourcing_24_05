@@ -20,11 +20,12 @@ public class UsrHomeController {
 		return "redirect:/usr/home/main";
 	}
 
-	@RequestMapping("/usr/crawl")
-	public String doCrawl() {
+	
+	@RequestMapping("/usr/home/about")
+	public String about() {
 
-		crawlTest.crawl();
-
-		return "redirect:/usr/home/main";
+		return "/usr/home/about";
 	}
+	
+	
 }
