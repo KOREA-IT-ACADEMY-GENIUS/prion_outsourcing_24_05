@@ -308,6 +308,10 @@ body, ul, li, h1 {
 	<body>
 
 		<section class="container">
+		
+		
+<!-- 상단 문구 -->
+
 			<section class="hero-section">
 				<img loading="lazy"
 					src="https://cdn.builder.io/api/v1/image/assets/TEMP/3549847b01ef1c6db8b25c26779c7bb9ae7fa1adf578c5bacce1c00342167d99?apiKey=725f06f0daeb4ab382150ea4b4cf3550&"
@@ -320,8 +324,12 @@ body, ul, li, h1 {
 			</section>
 			<h2 class="section-title">WORKING PROCESS</h2>
 
+<!-- 프로세스 바 -->
 			<img src="https://i.ibb.co/82rgP2F/12.png" alt="image" border="0"
 				class="progress"></a>
+				
+
+<!-- 프로세스 설명 -->
 			<section class="process-steps">
 				<div class="step">
 					<h3 class="step-title">기획</h3>
@@ -336,13 +344,11 @@ body, ul, li, h1 {
 				<div class="image-row">
 					<div class="image-column">
 						<img loading="lazy"
-							src="https://i.ibb.co/4jfypNw/Frame-4.png"
-							class="img" alt="설명 이미지 1" />
+							src="https://i.ibb.co/4jfypNw/Frame-4.png" class="img" alt="기획 설명 이미지 1" /> <!-- 기획 관련 이미지 URL 입력 -->
 					</div>
 					<div class="image-column">
 						<img loading="lazy"
-							src="https://i.ibb.co/4jfypNw/Frame-4.png"
-							class="img" alt="설명 이미지 2" />
+							src="https://i.ibb.co/4jfypNw/Frame-4.png"class="img" alt="디자인 설명 이미지 2" /> <!-- 디자인 관련 이미지 URL 입력 -->
 					</div>
 				</div>
 			</section>
@@ -360,13 +366,11 @@ body, ul, li, h1 {
 				<div class="image-row">
 					<div class="image-column">
 						<img loading="lazy"
-							src="https://i.ibb.co/4jfypNw/Frame-4.png"
-							class="img" alt="설명 이미지 3" />
+							src="https://i.ibb.co/4jfypNw/Frame-4.png" class="img" alt="제판 설명 이미지 3" /> <!-- 제판 관련 이미지 URL 입력 -->
 					</div>
 					<div class="image-column">
 						<img loading="lazy"
-							src="https://i.ibb.co/4jfypNw/Frame-4.png"
-							class="img" alt="설명 이미지 4" />
+							src="https://i.ibb.co/4jfypNw/Frame-4.png" class="img" alt="인쇄 설명 이미지 4" /> <!-- 인쇄 관련 이미지 URL 입력 -->
 					</div>
 				</div>
 			</section>
@@ -384,13 +388,11 @@ body, ul, li, h1 {
 				<div class="final-image-row">
 					<div class="final-image-column">
 						<img loading="lazy"
-							src="https://i.ibb.co/4jfypNw/Frame-4.png"
-							class="final-img" alt="설명 이미지 5" />
+							src="https://i.ibb.co/4jfypNw/Frame-4.png" class="final-img" alt="제본 설명 이미지 5" /> <!-- 제본 관련 이미지 URL 입력 -->
 					</div>
 					<div class="final-image-column">
 						<img loading="lazy"
-							src="https://i.ibb.co/4jfypNw/Frame-4.png"
-							class="final-img" alt="설명 이미지 6" />
+							src="https://i.ibb.co/4jfypNw/Frame-4.png" class="final-img" alt="후가공 이미지 6" /> <!-- 후가공 관련 이미지 URL 입력 -->
 					</div>
 				</div>
 			</section>
