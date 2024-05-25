@@ -79,10 +79,17 @@
 	width: 100%;
 }
 
-@media ( max-width : 1920px) {
+.contact-section {
+	margin-bottom: 220px;
+}
+
+@media ( max-width : 991px) {
 	.section {
 		max-width: 100%;
 		margin-top: 40px;
+	}
+	.contact-section {
+		margin-bottom: 0;
 	}
 }
 
@@ -416,16 +423,16 @@
 	<section class="contact-wrapper">
 		<div class="heading-lg-contact">CONTACT US</div>
 		<div class="section-box">
-			<section class="section">
+			<section class="section contact-section">
 				<div class="flex-container">
 					<form class="flex-column card gform" method="POST"
 						data-email="yungayeon223@gmail.com"
 						action="https://script.google.com/macros/s/AKfycbyZeKUl8USW8rSUfOIvOPxYlOnwfN53RYPOsl-3R1szgMLNfM4h3swn74aOlFKTdcAAog/exec">
 						<div class="contact-text-bold">Contact Us</div>
 						<p class="text-regular">
-							디자인집에 전화하는 순간, 당신의 고민은 디자인집의 고민이 됩니다.
+							프리온과 연결되는 순간, 고객님의 아이디어는 우리의 도전이 됩니다.
 							<br />
-							디자인집에 의뢰하는 순간, 디자인집과의 멋진 동행이 시작됩니다.
+							프리온과 함께 하는 순간, 특별한 성공의 여정이 시작됩니다.
 						</p>
 						<div class="form-group">
 							<div>
@@ -439,11 +446,12 @@
 						</div>
 						<div class="form-row">
 							<input type="text" id="name-input" class="input-box"
-								placeholder="성함을 입력해주세요." aria-label="성함을 입력해주세요." name="name" />
-							<input type="email" id="email-input" class="input-box"
-								autocomplete="off" type="text" placeholder="id@email.com"
-								name="email" placeholder="E-mail을 입력해주세요."
-								aria-label="E-mail을 입력해주세요." />
+								style="padding-left: 5px;" placeholder="성함을 입력해주세요."
+								aria-label="성함을 입력해주세요." name="name" autocomplete='off' />
+							<input style="padding-left: 5px;" type="email" id="email-input"
+								class="input-box" autocomplete="off" type="text"
+								placeholder="id@email.com" name="email"
+								placeholder="E-mail을 입력해주세요." aria-label="E-mail을 입력해주세요." />
 						</div>
 
 						<div class="contact-info">
@@ -451,39 +459,22 @@
 								<label for="contact-input">연락처</label>
 								<span class="required">*</span>
 							</div>
-							<input type="tel" id="contact-input" class="input-box"
-								placeholder="연락처를 입력해주세요." aria-label="연락처를 입력해주세요." type="text"
-								name="contact" />
+							<input style="padding-left: 5px;" type="tel" id="contact-input"
+								class="input-box" placeholder="연락처를 입력해주세요." type="text"
+								name="contact" autocomplete='off' />
 						</div>
-
 						<div class="contact-info">
 							<div>
 								<label for="inquiry-textarea">문의하기</label>
 								<span class="required">*</span>
 							</div>
 							<textarea id="inquiry-textarea" class="textarea-box" name="body"
-								style="﻿overflow-y: scroll; overflow-x: hidden; resize: none;"
-								required>
-								</textarea>
+								placeholder="연락처를 입력해주세요."
+								style="overflow-y: scroll; resize: none;" autocomplete='off'></textarea>
 						</div>
 
 						<button class="submit-btn" id="submitBtn" type="submit">문의하기</button>
 					</form>
-
-					<aside class="flex-column">
-						<section class="common-card">
-							<div class="common-card-div">Recruit</div>
-							<p class="common-card-text">
-								디자인집은 동그란 마음으로 네모지게 일합니다.
-								<br />
-								디자인집은 동그란 마음으로 당신을 맞이합니다.
-								<br />
-								두드리세요.
-								<br />
-								어쩌면, 내일부터 디자인집의 가족이 될지 모릅니다.
-							</p>
-						</section>
-					</aside>
 				</div>
 			</section>
 			<div class="mid-line"></div>
