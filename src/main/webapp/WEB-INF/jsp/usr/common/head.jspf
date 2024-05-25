@@ -111,13 +111,13 @@ TopBar__init();
           <a href="#" class="flex flex-ai-c height-100p " ">ABOUT</a>
         </li>
         <li>
-          <a href="/usr/home/productsService" class="flex flex-ai-c height-100p"">PRODUCT</a>
+          <a href="/usr/home/productService" class="flex flex-ai-c height-100p"">PRODUCT</a>
         </li>
         <li>
           <a href="/usr/home/workingProcess" class="flex flex-ai-c height-100p" ">WORKING PROCESS</a>
         </li>
         <li>
-          <a href="#" class="flex flex-ai-c height-100p" ">CONTACT US</a>
+          <a href="/usr/home/contact" class="flex flex-ai-c height-100p" ">CONTACT US</a>
         </li>
       </ul>
       <div class="bg"></div>
