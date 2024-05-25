@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<c:set var="pageTitle" value="API TEST"></c:set>
+<c:set var="pageTitle" value="productService"></c:set>
 
 <%@ include file="../common/head.jspf"%>
+
 <section class="main-section">
   <style>
     .main-section {
@@ -31,7 +32,7 @@
     @media (max-width: 991px) {
       .content-container {
         max-width: 100%;
-        margin-top: 40px;
+        margin-top: 100px;
       }
     }
 
@@ -75,19 +76,19 @@
       height: 2px;
     }
 
-    .publication-heading {
-      color: #000;
-      text-align: center;
-      letter-spacing: -1.26px;
-      margin-top: 72px;
-      font: 700 32px Pretendard, sans-serif;
-    }
+/*     .fpublication-heading { */
+/*       color: #000; */
+/*       text-align: center; */
+/*       letter-spacing: -1.26px; */
+/*       margin-top: 72px; */
+/*       font: 700 32px Pretendard, sans-serif; */
+/*     } */
 
-    @media (max-width: 991px) {
-      .publication-heading {
-        margin-top: 40px;
-      }
-    }
+/*     @media (max-width: 991px) { */
+/*       .publication-heading { */
+/*         margin-top: 40px; */
+/*       } */
+/*     } */
 
     .publication-types {
       align-self: stretch;
@@ -121,6 +122,7 @@
       height: 55px;
       text-align: center;
       background-color: #fff;
+      border-radius: 5px;
     }
     
     .publication-button.active {
@@ -133,13 +135,14 @@
       .publication-button {
         max-width: 100%;
         padding: 0 20px;
+        margin-left: auto;
+        margin-right: auto;
       }
 
     }
 
     .image-gallery {
       margin-top: 50px;
-      width: 1281px;
       max-width: 100%;
     }
 
@@ -152,6 +155,7 @@
     .image-row {
       gap: 20px;
       display: flex;
+      margin-top: 50px;
     }
 
     @media (max-width: 991px) {
@@ -197,6 +201,15 @@
       object-fit: auto;
       object-position: center;
       width: 100%;
+      cursor: pointer;
+    }
+    
+    
+    
+@media (max-width: 991px) {
+      .image {
+        width: 500px;
+      }
     }
 
     .image-description {
@@ -235,7 +248,7 @@
     bottom: -3px;
     left: 0;
     width: 0;
-    height: 3px;
+    height: 2px;
     background-color: transparent;
     transition: background-color 0.3s, width 0.3s;
 
@@ -275,10 +288,16 @@ width: 130px;
   bottom: -3px;
   left: 0;  
   width: 0;  
-  height: 3px; 
+  height: 2px; 
   background-color: #4dbf5e;
 }
+
+img {
+  object-fit: cover;
+}
+
   </style>
+
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
@@ -329,64 +348,63 @@ document.addEventListener("DOMContentLoaded", function() {
 
 </script>
 
-
-  <div class="content-container">
-    <h1 class="heading">제품/서비스</h1>
+<div class="content-container">
+    <h1 class="heading">PRODUCT/SERVICE</h1>
     <div class="service-options">
     <a href="" class="active-service1"><div class="tab-1" id="tab">인쇄출판<div class="bottom-bar" style="width : 130px"></div></div></a>
 <a href="" class="inactive-service2"><div class="tab-2" id="tab">시즌제작물</div></a>
 <a href="" class="inactive-service3"><div class="tab-3" id="tab">봉투</div></a>
 
     </div>
-<!--     <h2 class="publication-heading">인쇄출판</h2> -->
     <div class="publication-types">
-      <button class="publication-button section1-button">환양장책</button>
+      <button class="publication-button active section1-button">환양장책</button>
       <button class="publication-button section2-button">각양장책</button>
       <button class="publication-button section3-button">소프트양장책</button>
       <button class="publication-button section4-button">무선</button>
       <button class="publication-button section5-button">잡지</button>
       <button class="publication-button section6-button">카탈로그</button>
     </div>
-    
+
     <div id="section1">
     <div class="image-gallery">
       <div class="image-row">
         <div class="image-column">
           <div class="image-wrapper">
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/93c784a57cc4b2cdd88116d510ff90898346be2d116d3c174453326c02f0aea5?apiKey=0b15629a671e403aa0993648c58d92e2&" alt="날개 양장 제본 만화책" class="image" />
-            <div class="image-description">날개 양장 제본 만화책</div>
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트1</div>
           </div>
         </div>
         <div class="image-column">
           <div class="image-wrapper">
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/47044dd77b1bad7736a5c072cc8df14f23c3929771a132877f83a9ebd5f251d1?apiKey=0b15629a671e403aa0993648c58d92e2&" alt="일러스트 그림책" class="image" />
-            <div class="image-description">일러스트 그림책</div>
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트2</div>
           </div>
         </div>
         <div class="image-column">
           <div class="image-wrapper">
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ffcca37f4c43233645d8abcb6bcb50d0e0d7899c879dc397b578344f717b2d15?apiKey=0b15629a671e403aa0993648c58d92e2&" alt="풀컬러 동화책" class="image" />
-            <div class="image-description">풀컬러 동화책</div>
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트3</div>
           </div>
         </div>
       </div>
+
       <div class="image-row">
       <div class="image-column">
           <div class="image-wrapper">
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/93c784a57cc4b2cdd88116d510ff90898346be2d116d3c174453326c02f0aea5?apiKey=0b15629a671e403aa0993648c58d92e2&" alt="날개 양장 제본 만화책" class="image" />
-            <div class="image-description">날개 양장 제본 만화책</div>
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트4</div>
           </div>
         </div>
         <div class="image-column">
           <div class="image-wrapper">
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/93c784a57cc4b2cdd88116d510ff90898346be2d116d3c174453326c02f0aea5?apiKey=0b15629a671e403aa0993648c58d92e2&" alt="날개 양장 제본 만화책" class="image" />
-            <div class="image-description">날개 양장 제본 만화책</div>
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트5</div>
           </div>
         </div>
         <div class="image-column">
           <div class="image-wrapper">
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/93c784a57cc4b2cdd88116d510ff90898346be2d116d3c174453326c02f0aea5?apiKey=0b15629a671e403aa0993648c58d92e2&" alt="날개 양장 제본 만화책" class="image" />
-            <div class="image-description">날개 양장 제본 만화책</div>
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트6</div>
           </div>
         </div>
       </div>
@@ -398,20 +416,40 @@ document.addEventListener("DOMContentLoaded", function() {
       <div class="image-row">
         <div class="image-column">
           <div class="image-wrapper">
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/35ecbc266552011bb4ba664d629fef92d765ce3df7e8a1c56c14147e0dc23529?apiKey=0b15629a671e403aa0993648c58d92e2&" alt="언론 연대기 도서" class="image" />
-            <div class="image-description">언론 연대기 도서</div>
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트7</div>
           </div>
         </div>
         <div class="image-column">
           <div class="image-wrapper">
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/61677d95741db27244cacbd9fb9657a3f4610cd698c47bc17ff23deaea6e6524?apiKey=0b15629a671e403aa0993648c58d92e2&" alt="의학 정보 만화책" class="image" />
-            <div class="image-description">의학 정보 만화책</div>
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트8</div>
           </div>
         </div>
         <div class="image-column">
           <div class="image-wrapper">
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/340448bf3d8a76781e359ad5ee39743a906190a26c48ae75ada3376ca404e637?apiKey=0b15629a671e403aa0993648c58d92e2&" alt="사철각양장 명화 도서" class="image" />
-            <div class="image-description">사철각양장 명화 도서</div>
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트9</div>
+          </div>
+        </div>
+      </div>
+      <div class="image-row">
+      <div class="image-column">
+          <div class="image-wrapper">
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트10</div>
+          </div>
+        </div>
+        <div class="image-column">
+          <div class="image-wrapper">
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트11</div>
+          </div>
+        </div>
+        <div class="image-column">
+          <div class="image-wrapper">
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트12</div>
           </div>
         </div>
       </div>
@@ -424,17 +462,43 @@ document.addEventListener("DOMContentLoaded", function() {
       <div class="image-row">
         <div class="image-column">
           <div class="image-wrapper">
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/af212ac6299ad1ae41f9e5eacaad1f618f5d5220f8521b19c867fc2c00baffd3?apiKey=0b15629a671e403aa0993648c58d92e2&" alt="각양장 영문 도서" class="image" />
-            <div class="image-description">각양장 영문 도서</div>
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트13</div>
           </div>
         </div>
         <div class="image-column">
           <div class="image-wrapper">
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/8658d82d12fd877de431731d3c9e437afacb82e5f488f55eb587b762ad3905eb?apiKey=0b15629a671e403aa0993648c58d92e2&" alt="작품 아트북" class="image" />
-            <div class="image-description">작품 아트북</div>
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트14</div>
+          </div>
+        </div>
+        <div class="image-column">
+          <div class="image-wrapper">
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트15</div>
           </div>
         </div>
         </div>
+        <div class="image-row">
+      <div class="image-column">
+          <div class="image-wrapper">
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트16</div>
+          </div>
+        </div>
+        <div class="image-column">
+          <div class="image-wrapper">
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트17</div>
+          </div>
+        </div>
+        <div class="image-column">
+          <div class="image-wrapper">
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트18</div>
+          </div>
+        </div>
+      </div>
       </div>
     </div>
     
@@ -443,20 +507,40 @@ document.addEventListener("DOMContentLoaded", function() {
       <div class="image-row">
         <div class="image-column">
           <div class="image-wrapper">
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/91f753c708bb627c7598e8efeaa5c0064bc3676d8320bdba2eba968e970fc495?apiKey=0b15629a671e403aa0993648c58d92e2&" alt="아동 도서" class="image" />
-            <div class="image-description">아동 도서</div>
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트19</div>
           </div>
         </div>
         <div class="image-column">
           <div class="image-wrapper">
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/366090d29496c0fc9eba1a9c916ad1af803a22c7a7ecff81d4ea03709890b2b7?apiKey=0b15629a671e403aa0993648c58d92e2&" alt="전시회 카탈로그" class="image" />
-            <div class="image-description">전시회 카탈로그</div>
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트20</div>
           </div>
         </div>
         <div class="image-column">
           <div class="image-wrapper">
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/420ea46fea179155ca3cc64749a82df8545297962b25b49e5a1e1e4fc561d82d?apiKey=0b15629a671e403aa0993648c58d92e2&" alt="각양장 도서" class="image" />
-            <div class="image-description">각양장 도서</div>
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트21</div>
+          </div>
+        </div>
+      </div>
+      <div class="image-row">
+      <div class="image-column">
+          <div class="image-wrapper">
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트22</div>
+          </div>
+        </div>
+        <div class="image-column">
+          <div class="image-wrapper">
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트23</div>
+          </div>
+        </div>
+        <div class="image-column">
+          <div class="image-wrapper">
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트24</div>
           </div>
         </div>
       </div>
@@ -468,49 +552,90 @@ document.addEventListener("DOMContentLoaded", function() {
       <div class="image-row">
         <div class="image-column">
           <div class="image-wrapper">
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/366090d29496c0fc9eba1a9c916ad1af803a22c7a7ecff81d4ea03709890b2b7?apiKey=0b15629a671e403aa0993648c58d92e2&" alt="아동 도서" class="image" />
-            <div class="image-description">아동 도서</div>
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트25</div>
           </div>
         </div>
         <div class="image-column">
           <div class="image-wrapper">
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/366090d29496c0fc9eba1a9c916ad1af803a22c7a7ecff81d4ea03709890b2b7?apiKey=0b15629a671e403aa0993648c58d92e2&" alt="전시회 카탈로그" class="image" />
-            <div class="image-description">전시회 카탈로그</div>
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트26</div>
           </div>
         </div>
         <div class="image-column">
           <div class="image-wrapper">
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/366090d29496c0fc9eba1a9c916ad1af803a22c7a7ecff81d4ea03709890b2b7?apiKey=0b15629a671e403aa0993648c58d92e2&" alt="각양장 도서" class="image" />
-            <div class="image-description">각양장 도서</div>
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트27</div>
           </div>
         </div>
       </div>
-    </div></div>
+      <div class="image-row">
+      <div class="image-column">
+          <div class="image-wrapper">
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트28</div>
+          </div>
+        </div>
+        <div class="image-column">
+          <div class="image-wrapper">
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트29</div>
+          </div>
+        </div>
+        <div class="image-column">
+          <div class="image-wrapper">
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트30</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
     
         
     <div id="section6"><div class="image-gallery">
       <div class="image-row">
         <div class="image-column">
           <div class="image-wrapper">
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/91f753c708bb627c7598e8efeaa5c0064bc3676d8320bdba2eba968e970fc495?apiKey=0b15629a671e403aa0993648c58d92e2&" alt="아동 도서" class="image" />
-            <div class="image-description">아동 도서</div>
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트31</div>
           </div>
         </div>
         <div class="image-column">
           <div class="image-wrapper">
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/91f753c708bb627c7598e8efeaa5c0064bc3676d8320bdba2eba968e970fc495?apiKey=0b15629a671e403aa0993648c58d92e2&" alt="전시회 카탈로그" class="image" />
-            <div class="image-description">전시회 카탈로그</div>
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트32</div>
           </div>
         </div>
         <div class="image-column">
           <div class="image-wrapper">
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/91f753c708bb627c7598e8efeaa5c0064bc3676d8320bdba2eba968e970fc495?apiKey=0b15629a671e403aa0993648c58d92e2&" alt="각양장 도서" class="image" />
-            <div class="image-description">각양장 도서</div>
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트33</div>
+          </div>
+        </div>
+      </div>
+      <div class="image-row">
+      <div class="image-column">
+          <div class="image-wrapper">
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트34</div>
+          </div>
+        </div>
+        <div class="image-column">
+          <div class="image-wrapper">
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트35</div>
+          </div>
+        </div>
+        <div class="image-column">
+          <div class="image-wrapper">
+            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image" />
+            <div class="image-description">텍스트36</div>
           </div>
         </div>
       </div>
     </div>
     </div>
-    
-  </div>
+</div>
 </section>
+
