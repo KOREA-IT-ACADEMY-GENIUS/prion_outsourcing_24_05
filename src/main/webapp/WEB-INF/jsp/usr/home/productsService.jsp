@@ -5,18 +5,6 @@
 <%@ include file="../common/head.jspf"%>
 <section class="main-section">
   <style>
-*{
-    font-family: 'Pretendard-Regular';
-    font-weight: 600;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-}
     .main-section {
       background-color: #fff;
       display: flex;
@@ -59,6 +47,7 @@
       position:relative;
       margin-top: 72px;
       max-width: 100%;
+      width: 100%;
       gap: 20px;
       font-size: 30px;
       color: rgba(0, 0, 0, 0.4);
@@ -66,6 +55,7 @@
       white-space: nowrap;
       text-align: center;
       justify-content: space-around;
+      
     }
 
     @media (max-width: 991px) {
@@ -90,7 +80,7 @@
       text-align: center;
       letter-spacing: -1.26px;
       margin-top: 72px;
-      font: 700 42px/150% Pretendard, sans-serif;
+      font: 700 32px Pretendard, sans-serif;
     }
 
     @media (max-width: 991px) {
@@ -130,12 +120,14 @@
       width: 500px;
       height: 55px;
       text-align: center;
+      background-color: #fff;
     }
+    
+    .publication-button.active {
+    background-color: #4dbf5e; 
+    color: #fff;
+}
 
-    .active-button {
-      background-color: #4dbf5e;
-      color: #fff;
-    }
 
     @media (max-width: 991px) {
       .publication-button {
@@ -213,11 +205,31 @@
 
 .active-service1, .inactive-service2, .inactive-service3 {
     position: relative;
-    margin-left: 30px;
-    margin-right: 5px;
+/*     margin-left: 30px; */
+/*     margin-right: 5px; */
+    
 }
 
-.active-service1::after, .inactive-service2::after, .inactive-service3::after {
+
+/* 수정 필요 */
+
+.active-service1 {
+ color:black;
+}
+
+/* .active-service1::after { */
+/*  width: 100%;  */
+/*  content: ""; */
+/*  position: absolute;  */
+/*  bottom: -3px;  */
+/*  left: 0;  */
+/*  width: 0;  */
+/*  height: 3px; */
+/*  background-color: #4dbf5e; */
+/*  } */
+
+.inactive-service2::after, .inactive-service3::after {
+
     content: "";
     position: absolute;
     bottom: -3px;
@@ -226,13 +238,14 @@
     height: 3px;
     background-color: transparent;
     transition: background-color 0.3s, width 0.3s;
+
 }
 
-.active-service1:hover::after {
-    width: 100%;
-    background-color: #4dbf5e;
-    color:black;
-}
+/* .active-service1:hover::after { */
+/*     width: 100%; */
+/*     background-color: #4dbf5e; */
+/*     color:black; */
+/* } */
 
 .inactive-service2:hover::after {
     width: 100%;
@@ -250,26 +263,92 @@ a:hover{
 color:black;
 transition: 1s;
 }
+
+#tab{
+
+width: 130px;
+
+}
+
+.bottom-bar{
+  position: absolute;
+  bottom: -3px;
+  left: 0;  
+  width: 0;  
+  height: 3px; 
+  background-color: #4dbf5e;
+}
   </style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var buttons = document.querySelectorAll('.publication-button');
+    
+    buttons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            buttons.forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+            
+            // Add active class to the clicked button
+            this.classList.add('active');
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    var buttons = document.querySelectorAll('.publication-button');
+    var sections = document.querySelectorAll('.image-gallery');
+
+    buttons.forEach(function(button, index) {
+        button.addEventListener('click', function() {
+        	// 모든 버튼에서 활성화 클래스를 제거
+            buttons.forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+            // 클릭된 버튼에 활성화 클래스 추가
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            // 모든 섹션을 숨김
+            this.classList.add('active');
+         	// 해당 섹션을 표시
+            sections[index].style.display = 'block';
+        });
+    });
+
+ 	// 처음에 첫 번째 섹션을 표시
+    sections.forEach(function(section, index) {
+        if (index !== 0) {
+            section.style.display = 'none';
+        }
+    });
+});
+
+</script>
+
 
   <div class="content-container">
     <h1 class="heading">제품/서비스</h1>
     <div class="service-options">
-    <a href="" class="active-service1"><div class="tab-1">인쇄출판</div></a>
-<!--       <div class="active-service"> -->
-        
-<!--         <div class="underline"> -->
-<!--       </div> -->
-<a href="" class="inactive-service2"><div class="tab-2">판재</div></a>
-<a href="" class="inactive-service3"><div class="tab-3">시즌제작물</div></a>
+    <a href="" class="active-service1"><div class="tab-1" id="tab">인쇄출판<div class="bottom-bar" style="width : 130px"></div></div></a>
+<a href="" class="inactive-service2"><div class="tab-2" id="tab">시즌제작물</div></a>
+<a href="" class="inactive-service3"><div class="tab-3" id="tab">봉투</div></a>
 
     </div>
-    <h2 class="publication-heading">인쇄출판</h2>
+<!--     <h2 class="publication-heading">인쇄출판</h2> -->
     <div class="publication-types">
-      <button class="publication-button active-button">양장 제본 도서</button>
-      <button class="publication-button inactive-button">링 제본 도서</button>
-      <button class="publication-button inactive-button-2">정기간행물</button>
+      <button class="publication-button section1-button">환양장책</button>
+      <button class="publication-button section2-button">각양장책</button>
+      <button class="publication-button section3-button">소프트양장책</button>
+      <button class="publication-button section4-button">무선</button>
+      <button class="publication-button section5-button">잡지</button>
+      <button class="publication-button section6-button">카탈로그</button>
     </div>
+    
+    <div id="section1">
     <div class="image-gallery">
       <div class="image-row">
         <div class="image-column">
@@ -291,7 +370,30 @@ transition: 1s;
           </div>
         </div>
       </div>
+      <div class="image-row">
+      <div class="image-column">
+          <div class="image-wrapper">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/93c784a57cc4b2cdd88116d510ff90898346be2d116d3c174453326c02f0aea5?apiKey=0b15629a671e403aa0993648c58d92e2&" alt="날개 양장 제본 만화책" class="image" />
+            <div class="image-description">날개 양장 제본 만화책</div>
+          </div>
+        </div>
+        <div class="image-column">
+          <div class="image-wrapper">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/93c784a57cc4b2cdd88116d510ff90898346be2d116d3c174453326c02f0aea5?apiKey=0b15629a671e403aa0993648c58d92e2&" alt="날개 양장 제본 만화책" class="image" />
+            <div class="image-description">날개 양장 제본 만화책</div>
+          </div>
+        </div>
+        <div class="image-column">
+          <div class="image-wrapper">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/93c784a57cc4b2cdd88116d510ff90898346be2d116d3c174453326c02f0aea5?apiKey=0b15629a671e403aa0993648c58d92e2&" alt="날개 양장 제본 만화책" class="image" />
+            <div class="image-description">날개 양장 제본 만화책</div>
+          </div>
+        </div>
+      </div>
     </div>
+    </div>
+    
+    <div id="sectuon2">
     <div class="image-gallery">
       <div class="image-row">
         <div class="image-column">
@@ -314,6 +416,10 @@ transition: 1s;
         </div>
       </div>
     </div>
+    </div>
+    
+    
+    <div id="section3">
     <div class="image-gallery">
       <div class="image-row">
         <div class="image-column">
@@ -328,14 +434,11 @@ transition: 1s;
             <div class="image-description">작품 아트북</div>
           </div>
         </div>
-        <div class="image-column">
-          <div class="image-wrapper">
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/b819a0c452a3122a8c5192d38cf3c3bac60a35a68b2b58283a42ff266013a5b4?apiKey=0b15629a671e403aa0993648c58d92e2&" alt="둥근 책등 도서" class="image" />
-            <div class="image-description">둥근 책등 도서</div>
-          </div>
         </div>
       </div>
     </div>
+    
+    <div id="section4">
     <div class="image-gallery">
       <div class="image-row">
         <div class="image-column">
@@ -358,5 +461,56 @@ transition: 1s;
         </div>
       </div>
     </div>
+    </div>
+    
+    
+    <div id="section5"><div class="image-gallery">
+      <div class="image-row">
+        <div class="image-column">
+          <div class="image-wrapper">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/366090d29496c0fc9eba1a9c916ad1af803a22c7a7ecff81d4ea03709890b2b7?apiKey=0b15629a671e403aa0993648c58d92e2&" alt="아동 도서" class="image" />
+            <div class="image-description">아동 도서</div>
+          </div>
+        </div>
+        <div class="image-column">
+          <div class="image-wrapper">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/366090d29496c0fc9eba1a9c916ad1af803a22c7a7ecff81d4ea03709890b2b7?apiKey=0b15629a671e403aa0993648c58d92e2&" alt="전시회 카탈로그" class="image" />
+            <div class="image-description">전시회 카탈로그</div>
+          </div>
+        </div>
+        <div class="image-column">
+          <div class="image-wrapper">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/366090d29496c0fc9eba1a9c916ad1af803a22c7a7ecff81d4ea03709890b2b7?apiKey=0b15629a671e403aa0993648c58d92e2&" alt="각양장 도서" class="image" />
+            <div class="image-description">각양장 도서</div>
+          </div>
+        </div>
+      </div>
+    </div></div>
+    
+        
+    <div id="section6"><div class="image-gallery">
+      <div class="image-row">
+        <div class="image-column">
+          <div class="image-wrapper">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/91f753c708bb627c7598e8efeaa5c0064bc3676d8320bdba2eba968e970fc495?apiKey=0b15629a671e403aa0993648c58d92e2&" alt="아동 도서" class="image" />
+            <div class="image-description">아동 도서</div>
+          </div>
+        </div>
+        <div class="image-column">
+          <div class="image-wrapper">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/91f753c708bb627c7598e8efeaa5c0064bc3676d8320bdba2eba968e970fc495?apiKey=0b15629a671e403aa0993648c58d92e2&" alt="전시회 카탈로그" class="image" />
+            <div class="image-description">전시회 카탈로그</div>
+          </div>
+        </div>
+        <div class="image-column">
+          <div class="image-wrapper">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/91f753c708bb627c7598e8efeaa5c0064bc3676d8320bdba2eba968e970fc495?apiKey=0b15629a671e403aa0993648c58d92e2&" alt="각양장 도서" class="image" />
+            <div class="image-description">각양장 도서</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    
   </div>
 </section>

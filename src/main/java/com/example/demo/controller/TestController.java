@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class TestController {
 
-	@RequestMapping("/usr/home/testPage")
+	@RequestMapping("/usr/home/productsService")
 	public String APITest() {
 
-		return "/usr/home/testPage";
+		return "/usr/home/productsService";
 	}
 
 }
