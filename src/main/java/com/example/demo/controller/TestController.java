@@ -11,5 +11,11 @@ public class TestController {
 
 		return "/usr/home/productsService";
 	}
+	
+	@RequestMapping("/usr/home/workingProcess")
+	public String workingProcess() {
+
+		return "/usr/home/workingProcess";
+	}
 
 }
