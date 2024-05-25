@@ -118,7 +118,7 @@ body, ul, li, h1 {
 }
 
 .step-title {
-	color: #4dbf5e;
+	color: #000000;
 	letter-spacing: -1.2px;
 	font: 700 40px Pretendard, sans-serif;
 }
@@ -220,7 +220,7 @@ body, ul, li, h1 {
 }
 
 .sub-step-title {
-	color: #4dbf5e;
+	color: #000000;
 	letter-spacing: -1.2px;
 	font: 700 40px Pretendard, sans-serif;
 }
