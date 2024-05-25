@@ -399,3 +399,5 @@ body, ul, li, h1 {
 		</section>
 
 	</body>
+	
+	<%@ include file="../common/foot.jspf"%>
