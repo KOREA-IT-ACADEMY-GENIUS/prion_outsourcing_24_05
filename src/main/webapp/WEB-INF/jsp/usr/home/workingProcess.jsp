@@ -286,6 +286,7 @@ body, ul, li, h1 {
 	aspect-ratio: 1.49;
 	object-fit: auto;
 	width: 100%;
+	object-fit: cover;
 }
 
 @media ( max-width : 991px) {
