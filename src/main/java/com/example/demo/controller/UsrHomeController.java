@@ -30,4 +30,22 @@ public class UsrHomeController {
 		return "/usr/home/contact";
 	}
 
+	@RequestMapping("/usr/home/productService")
+	public String productService() {
+
+		return "/usr/home/productService";
+	}
+	
+	@RequestMapping("/usr/home/productService2")
+	public String productService2() {
+
+		return "/usr/home/productService2";
+	}
+	
+	@RequestMapping("/usr/home/productService3")
+	public String productService3() {
+
+		return "/usr/home/productService3";
+	}
+
 }
