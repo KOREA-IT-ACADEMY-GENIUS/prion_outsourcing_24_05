@@ -95,14 +95,15 @@ TopBar__init();
 
 <div class="top_bar">
   <div class="con height-100p flex flex-jc-sb">
-    <a href="about" class="logo flex flex-ai-c">
+    <a href="/usr/home/main" class="logo flex flex-ai-c">
+
       <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6b7fa0af06a2bf0f8148530d0a50ef572bef8e92b51dc7dc15c9c2fc46b39696?apiKey=725f06f0daeb4ab382150ea4b4cf3550&" alt="" style ="height: 50px;">
     </a>
     <nav class="menu_box_1">
       <ul class="height-100p flex">
 
         <li>
-          <a href="about" class="flex flex-ai-c height-100p ">ABOUT</a>
+          <a href="/usr/home/about" class="flex flex-ai-c height-100p ">ABOUT</a>
         </li>
         <li>
           <a href="/usr/home/productService" class="flex flex-ai-c height-100p">PRODUCT</a>
