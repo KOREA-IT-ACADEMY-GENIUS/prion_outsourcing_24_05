@@ -67,6 +67,7 @@ body, ul, li, h1 {
 	justify-content: center;
 	color: #ffffff;
 	font-size: 40px;
+ 	text-shadow: 2px 2px 5px rgb(0, 0, 0, 0.7);
 }
 
 @media ( max-width : 991px) {
@@ -132,7 +133,7 @@ body, ul, li, h1 {
 .step-description {
 	color: rgba(0, 0, 0, 0.8);
 	letter-spacing: -0.72px;
-	margin-top: 67px;
+	margin-top: 30px;
 	font: 400 24px Play, sans-serif;
 }
 
@@ -234,7 +235,7 @@ body, ul, li, h1 {
 .sub-step-description {
 	color: rgba(0, 0, 0, 0.8);
 	letter-spacing: -0.72px;
-	margin-top: 67px;
+	margin-top: 30px;
 	font: 400 24px Play, sans-serif;
 }
 
