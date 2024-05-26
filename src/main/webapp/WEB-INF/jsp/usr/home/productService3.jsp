@@ -208,8 +208,6 @@ justify-content: flex-start;
 
 .active-service1, .inactive-service2, .inactive-service3 {
     position: relative;
-/*     margin-left: 30px; */
-/*     margin-right: 5px; */
     
 }
 
