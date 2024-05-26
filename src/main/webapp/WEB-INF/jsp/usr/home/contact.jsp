@@ -55,13 +55,13 @@
 
 .heading-lg-contact {
 	display: flex;
-	font: 600 40px/110% Commissioner, sans-serif;
+	font: 600 40px/110% Pretendard, sans-serif;
 	letter-spacing: 0.16px;
 	color: #000;
 	text-align: center;
 	align-self: center;
 	margin-right: 50px;
-	font: 600 40px/110% Commissioner, sans-serif;
+	font: 600 40px/110% Pretendard, sans-serif;
 }
 
 @media ( max-width : 991px) {
@@ -128,7 +128,7 @@
 }
 
 .contact-text-bold {
-	font: 700 19px/73% Commissioner, sans-serif;
+	font: 700 19px/73% Pretendard, sans-serif;
 	letter-spacing: 0.6px;
 	color: #000;
 }
@@ -309,7 +309,7 @@
 
 .common-card-div {
 	margin-top: 58px;
-	font: 700 19px/73% Commissioner, sans-serif;
+	font: 700 19px/73% Pretendard, sans-serif;
 	letter-spacing: 0.6px;
 	color: #000;
 }
@@ -386,7 +386,7 @@
 
 .to-way {
 	margin-top: 31px;
-	font: 700 19px/73% Commissioner, sans-serif;
+	font: 700 19px/73% Pretendard, sans-serif;
 	letter-spacing: 0.6px;
 	color: #000;
 }
@@ -400,7 +400,7 @@
 
 .recruit-div {
 	margin-top: 109px;
-	font: 700 19px/73% Commissioner, sans-serif;
+	font: 700 19px/73% Pretendard, sans-serif;
 	letter-spacing: 0.6px;
 	color: #000;
 }
