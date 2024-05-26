@@ -9,130 +9,146 @@
 
 <style>
 /* 반응형 넓이 */
-@media ( max-width : 991px) {
-	.web-size {
-		display: none;
-	}
+@media (max-width: 991px) {
+    .web-size {
+        display: none;
+    }
 }
 
-@media ( min-width : 991px) {
-	.mobile-size {
-		display: none;
-	}
+@media (min-width: 991px) {
+    .mobile-size {
+        display: none;
+    }
 }
 
-/*상단 타이틀 박스 */
+/* 상단 타이틀 박스 */
 .title_box {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	width: 100vw;
-	height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+    height: 150px;
+    font-size: 4rem;
 }
-/*about 메뉴바  */
+
+/* about 메뉴바 */
 .about_menubar {
-	height: 100px;
-	font-weight: bold;
-	font-size: 2rem;
+    height: 100px;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 20px; /* 하단 마진 추가 */
 }
 
 .about_menubar>ul>li:hover>button {
-	background-color: red;
+    background-color: red;
 }
 
 .custom-container {
-	display: flex;
-	gap: 10px;
-	padding: 20px;
-	text-align: center;
-	font-size: 1.5rem;
-	letter-spacing: -0.05em;
-	flex-wrap: wrap;
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: -0.05em;
+    flex-wrap: wrap;
 }
 
 .custom-item {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 16px 64px;
-	border: 1px solid rgba(0, 0, 0, 0.2);
-	max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 64px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    max-width: 100%;
 }
 
 /* 세션 페이지 */
 .about-container {
-	width: 100vw;
-	height: 100vh;
-	background-color: #afafaf;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 20px; /* 상단 마진 추가 */
 }
 
-@media ( max-width : 991px) {
-	.about-container {
-		width: 100vw;
-		height: 49vh;
-	}
+@media (max-width: 991px) {
+    .about-container {
+        width: 100vw;
+        height: 49vh;
+    }
 }
 
 .about-page {
-	width: 100vw;
-	display: none;
+    width: 100vw;
+    height: 100%;
+    display: none;
 }
 
 .about-page.active {
-	display: block;
+    display: block;
 }
 
-/*인사말 화면*/
+/* 인사말 화면 */
 .greeting-div {
-	padding: 20px;
-	text-align: center;
-	/* width: 60%; */
-	line-height: 1.6;
-	white-space: pre-line;
+    padding: 20px;
+    text-align: center;
+    line-height: 1.6;
+    white-space: pre-line;
 }
 
-#greeting {
-	/* font-size: 1.2em; */
-	/* color: #333; */
-	
+/* 번역 버튼 */
+.trans-btn {
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    padding: 12px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.trans-btn:hover {
+    background-color: #afafaf;
+    color: white;
+}
+
+/* 보유 기계 이미지 사진 크기 */
+.fixed-size-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#section1 {
+    display: block;
 }
 </style>
+
+<!-- html -->
 <div style="height: 80px;"></div>
 
 <div class="title_box">
 	<h1>ABOUT</h1>
 </div>
 
-<nav class="about_menubar flex justify-center items-center web-size">
+<div class="about_menubar flex justify-center items-center">
 	<div class="custom-container">
 		<button class="custom-item " tabindex="0" data-target="section1">ABOUT</button>
 		<button class="custom-item" tabindex="0" data-target="section2">MACHINES</button>
-
 	</div>
-</nav>
-
-
-
-<nav class="about_menubar flex justify-center items-center mobile-size">
-	<select name="" id="">
-		<option value="">ABOUT</option>
-		<option value="">MACHINES</option>
-
-	</select>
-
-</nav>
+</div>
 
 <div class="about-container">
 
 	<section id="section1" class="active about-page">
-
 		<div class="flex justify-center flex-col"
 			style="width: 100%; height: 100%;">
-			<div class="flex flex-row justify-center"
-				style="border: 2px solid red;">
-				<button class="btn btn-outline" id="korean-btn">Korean</button>
-				<button class="btn btn-outline" id="english-btn">English</button>
+			<div class="flex flex-row justify-center">
+				<button class="trans-btn" id="korean-btn">Korean</button>
+				<button class="trans-btn" id="english-btn">English</button>
 			</div>
 			<div id="greeting-div" class="greeting-div">
 				<div id="greeting"></div>
@@ -140,28 +156,66 @@
 		</div>
 	</section>
 
-
-
-	<section id="section2" class="about-page">
-		<div class="machine-card-container">
-			<div class="machine-card-items">
-				<div class="machine-card flex" style="border: 2px solid red;">
-					<div class="machine-img">
-						<img src="https://picsum.photos/200/300" alt="" />
-					</div>
-					<div class="machine-name">기계이름</div>
-				</div>
-
+	<section id="section2" class="about-page" style="overflow: auto;">
+		<div class="flex flex-col items-center"
+			style="width: 100%; height: 100%;">
+			<div
+				style="width: 70%; height: 500px; position: relative; text-align: center; margin-bottom: 20px;">
+				<h1
+					style="position: absolute; width: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #afafaf; padding: 10px;">
+					CTP<br>Plate Printer
+				</h1>
+				<img src="https://i.ibb.co/f1DSgzJ/img1.png" alt=""
+					class="fixed-size-image" />
 			</div>
-
-
-
+			<div
+				style="width: 70%; height: 500px; position: relative; text-align: center; margin-bottom: 20px;">
+				<h1
+					style="position: absolute; width: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #afafaf; padding: 10px;">
+					1도 디지털 양면 인쇄기 (신도리코)<br>1 color both sided digital printing
+					machinery (Sindoh)
+				</h1>
+				<img src="https://i.ibb.co/f1DSgzJ/img1.png" alt=""
+					class="fixed-size-image" />
+			</div>
+			<div
+				style="width: 70%; height: 500px; position: relative; text-align: center; margin-bottom: 20px;">
+				<h1
+					style="position: absolute; width: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #afafaf; padding: 10px;">
+					1도 양면 오프셋 인쇄기<br>1 color both sided offset printing machinery
+					(Akiyama)
+				</h1>
+				<img src="https://i.ibb.co/f1DSgzJ/img1.png" alt=""
+					class="fixed-size-image" />
+			</div>
+			<div
+				style="width: 70%; height: 500px; position: relative; text-align: center; margin-bottom: 20px;">
+				<h1
+					style="position: absolute; width: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #afafaf; padding: 10px;">
+					4도 단면 오프셋 인쇄기<br>4 color offset printing machinery (samurai)
+				</h1>
+				<img src="https://i.ibb.co/f1DSgzJ/img1.png" alt=""
+					class="fixed-size-image" />
+			</div>
+			<div
+				style="width: 70%; height: 500px; position: relative; text-align: center; margin-bottom: 20px;">
+				<h1
+					style="position: absolute; width: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #afafaf; padding: 10px;">
+					8도 양면 오프셋 인쇄기<br>8 color both sided offset printing machinery
+					(akiyama)
+				</h1>
+				<img src="https://i.ibb.co/f1DSgzJ/img1.png" alt=""
+					class="fixed-size-image" />
+			</div>
 		</div>
-
 	</section>
+
+
+
+
 </div>
 
-<!-- js -->
+
 <script>
 	/*about 메뉴바안에서 각각의 버튼을 누르면 그에 맞는 section 페이지가 보일수 있도록 만들어주는 기능
 	토글 클래스와 비슷한 기능*/
@@ -181,8 +235,8 @@
              document.getElementById(targetId).classList.toggle('active');
          });
      });
-	
-	
+	</script>
+<script>
 	/*인사말 부분 채팅 애니메이션 효과*/
 document.addEventListener("DOMContentLoaded", function() {
     const greetingElement = document.getElementById("greeting");
@@ -210,7 +264,8 @@ ERP 시스템의 자동 견적과 제작 관리 시스템을 통해 보다 정�
 
 -대표이사 김현우-
 
-history since 1961 세신문화(1st Gen) @pil-dong
+HISTORY
+since 1961 세신문화(1st Gen) @pil-dong
 SEOUL (주)예원프린팅(2nd Gen) @ILSAN
 (주)프리온 (3rd Gen) ~ NOW @PAJU`;
 
@@ -235,7 +290,8 @@ Thank you.
 
 - CEO Hyunwoo Kim -
 
-history since 1961 세신문화(1st Gen) @pil-dong
+HISTORY
+since 1961 세신문화(1st Gen) @pil-dong
 SEOUL (주)예원프린팅(2nd Gen) @ILSAN
 (주)프리온 (3rd Gen) ~ NOW @PAJU`;
 
@@ -267,13 +323,6 @@ SEOUL (주)예원프린팅(2nd Gen) @ILSAN
     // Default to Korean content on page load
     typeWriter(koreanContent);
 });
-
-		
-	</script>
-
-
-
-
-
+</script>
 
 <%@ include file="../common/foot.jspf"%>
