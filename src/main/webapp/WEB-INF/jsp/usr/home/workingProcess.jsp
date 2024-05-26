@@ -115,7 +115,6 @@ body, ul, li, h1 {
 	display: flex;
 	flex-direction: column;
 	flex: 1;
-	padding: 0 20px;
 }
 
 .step-title {
@@ -217,7 +216,6 @@ body, ul, li, h1 {
 	display: flex;
 	flex-direction: column;
 	flex: 1;
-	padding: 0 20px;
 }
 
 .sub-step-title {
