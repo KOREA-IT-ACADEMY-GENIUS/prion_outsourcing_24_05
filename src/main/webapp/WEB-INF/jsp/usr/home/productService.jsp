@@ -78,20 +78,6 @@
       height: 2px;
     }
 
-/*     .fpublication-heading { */
-/*       color: #000; */
-/*       text-align: center; */
-/*       letter-spacing: -1.26px; */
-/*       margin-top: 72px; */
-/*       font: 700 32px Pretendard, sans-serif; */
-/*     } */
-
-/*     @media (max-width: 991px) { */
-/*       .publication-heading { */
-/*         margin-top: 40px; */
-/*       } */
-/*     } */
-
     .publication-types {
       align-self: stretch;
       display: flex;
@@ -220,28 +206,13 @@
 
 .active-service1, .inactive-service2, .inactive-service3 {
     position: relative;
-/*     margin-left: 30px; */
-/*     margin-right: 5px; */
     
 }
 
 
-/* 수정 필요 */
-
 .active-service1 {
  color:black;
 }
-
-/* .active-service1::after { */
-/*  width: 100%;  */
-/*  content: ""; */
-/*  position: absolute;  */
-/*  bottom: -3px;  */
-/*  left: 0;  */
-/*  width: 0;  */
-/*  height: 3px; */
-/*  background-color: #4dbf5e; */
-/*  } */
 
 .inactive-service2::after, .inactive-service3::after {
 
@@ -256,11 +227,6 @@
 
 }
 
-/* .active-service1:hover::after { */
-/*     width: 100%; */
-/*     background-color: #4dbf5e; */
-/*     color:black; */
-/* } */
 
 .inactive-service2:hover::after {
     width: 100%;
