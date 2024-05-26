@@ -219,32 +219,18 @@
     }
 
 .active-service1, .inactive-service2, .inactive-service3 {
+
     position: relative;
-/*     margin-left: 30px; */
-/*     margin-right: 5px; */
     
 }
 
+.inactive-service2 {
 
-/* 수정 필요 */
-
-.active-service1 {
  color:black;
+ 
 }
 
-/* .active-service1::after { */
-/*  width: 100%;  */
-/*  content: ""; */
-/*  position: absolute;  */
-/*  bottom: -3px;  */
-/*  left: 0;  */
-/*  width: 0;  */
-/*  height: 3px; */
-/*  background-color: #4dbf5e; */
-/*  } */
-
-.inactive-service2::after, .inactive-service3::after {
-
+.active-service1::after, .inactive-service3::after {
     content: "";
     position: absolute;
     bottom: -3px;
@@ -253,16 +239,9 @@
     height: 2px;
     background-color: transparent;
     transition: background-color 0.3s, width 0.3s;
-
 }
 
-/* .active-service1:hover::after { */
-/*     width: 100%; */
-/*     background-color: #4dbf5e; */
-/*     color:black; */
-/* } */
-
-.inactive-service2:hover::after {
+.active-service1:hover::after {
     width: 100%;
     background-color: #4dbf5e;
     color:black;
@@ -298,7 +277,6 @@ img {
   object-fit: cover;
 }
 
-  
   /* 모달창 */
   
 	.modal {
@@ -400,18 +378,18 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="content-container">
     <h1 class="heading">PRODUCT/SERVICE</h1>
     <div class="service-options">
-    <a href="/usr/home/productService" class="active-service1"><div class="tab-1" id="tab">인쇄출판<div class="bottom-bar" style="width : 130px"></div></div></a>
-<a href="/usr/home/productService2" class="inactive-service2"><div class="tab-2" id="tab">시즌제작물</div></a>
+    <a href="/usr/home/productService" class="active-service1"><div class="tab-1" id="tab">인쇄출판</div></a>
+<a href="/usr/home/productService2" class="inactive-service2"><div class="tab-2" id="tab">시즌제작물<div class="bottom-bar" style="width : 130px"></div></div></a>
 <a href="/usr/home/productService3" class="inactive-service3"><div class="tab-3" id="tab">봉투</div></a>
 
     </div>
     <div class="publication-types">
-      <button class="publication-button active section1-button">환양장책</button>
-      <button class="publication-button section2-button">각양장책</button>
-      <button class="publication-button section3-button">소프트양장책</button>
-      <button class="publication-button section4-button">무선</button>
-      <button class="publication-button section5-button">잡지</button>
-      <button class="publication-button section6-button">카탈로그</button>
+      <button class="publication-button active section1-button">탁상 달력</button>
+      <button class="publication-button section2-button">벽걸이 달력</button>
+      <button class="publication-button section3-button">링 다이어리</button>
+      <button class="publication-button section4-button">양장 다이어리</button>
+      <button class="publication-button section5-button">스프링 다이어리</button>
+      <button class="publication-button section6-button">친환경 다이어리</button>
     </div>
 
     <div id="section1">
