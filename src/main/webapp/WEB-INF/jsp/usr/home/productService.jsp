@@ -288,9 +288,25 @@ img {
     z-index: 10000;
     
 }
+
+
 span img:hover{
     cursor: -webkit-zoom-in;
 }
+
+@media (max-width: 768px) {
+      .modalBox {
+    position: relative;
+    text-align: center;
+    top : 50%;
+    left: 50%;
+    width: 90%;
+    max-height: 50%; 
+    position : sticky;
+    z-index: 10000;
+    transform:translate(-5%, -50%);
+      }
+    }
 
 
   </style>

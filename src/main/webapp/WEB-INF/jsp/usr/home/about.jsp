@@ -27,7 +27,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 100vw;
+    width: 100%;
     height: 150px;
     font-size: 4rem;
 }
@@ -61,6 +61,7 @@
     padding: 16px 64px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     max-width: 100%;
+    width: 150px;
 }
 
 /* 세션 페이지 */
@@ -98,22 +99,22 @@
 /* 번역 버튼 */
 .trans-btn {
     background-color: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+/*     border: 1px solid rgba(0, 0, 0, 0.2); */
     color: black;
     padding: 12px 15px;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
-    font-size: 14px;
+    font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 5px;
 }
 
-.trans-btn:hover {
-    background-color: #afafaf;
-    color: white;
-}
+ .trans-btn:hover { 
+/*      background-color: #afafaf;  */
+/*     color: white;  */
+    text-decoration: underline;
+ } 
 
 /* 보유 기계 이미지 사진 크기 */
 .fixed-size-image {
@@ -125,13 +126,19 @@
 #section1 {
     display: block;
 }
+
+.about-title{
+ font-size: 42px;
+ font-family: Pretendard, sans-serif;
+ font-weight: 700;
+}
 </style>
 
 <!-- html -->
 <div style="height: 80px;"></div>
 
 <div class="title_box">
-	<h1>ABOUT</h1>
+	<div class="about-title">ABOUT</div>
 </div>
 
 <div class="about_menubar flex justify-center items-center">
