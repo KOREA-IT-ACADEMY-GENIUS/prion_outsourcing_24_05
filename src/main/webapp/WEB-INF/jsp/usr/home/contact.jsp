@@ -55,13 +55,14 @@
 
 .heading-lg-contact {
 	display: flex;
-	font: 600 40px/110% Pretendard, sans-serif;
-	letter-spacing: 0.16px;
+	font-family: "Pretendard", sans-serif;
+	font-size:42px; 
+	font-weight: 700;
 	color: #000;
 	text-align: center;
 	align-self: center;
 	margin-right: 50px;
-	font: 600 40px/110% Pretendard, sans-serif;
+
 }
 
 @media ( max-width : 991px) {
