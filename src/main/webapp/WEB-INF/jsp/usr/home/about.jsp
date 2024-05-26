@@ -59,7 +59,7 @@
     justify-content: center;
     align-items: center;
     padding: 16px 64px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+/*     border: 1px solid rgba(0, 0, 0, 0.2); */
     max-width: 100%;
     width: 150px;
 }
@@ -132,6 +132,44 @@
  font-family: Pretendard, sans-serif;
  font-weight: 700;
 }
+
+.active-service1, .inactive-service2  {
+    position: relative;
+}
+
+
+.active-service1::after, .inactive-service2::after  {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.3s, width 0.3s, color 0.3s;
+
+}
+
+.active-service1:hover::after {
+    width: 100%;
+    background-color: #4dbf5e;
+}
+
+.inactive-service2:hover::after {
+    width: 100%;
+    background-color: #4dbf5e;
+}
+
+.active-service1:hover{
+color:black;
+transition: 1s;
+}
+
+.inactive-service2:hover {
+color:black;
+transition: 1s;
+}
+
 </style>
 
 <!-- html -->
@@ -143,8 +181,8 @@
 
 <div class="about_menubar flex justify-center items-center">
 	<div class="custom-container">
-		<button class="custom-item " tabindex="0" data-target="section1">ABOUT</button>
-		<button class="custom-item" tabindex="0" data-target="section2">MACHINES</button>
+		<button class="custom-item active-service1" tabindex="0" data-target="section1">ABOUT</button>
+		<button class="custom-item inactive-service2" tabindex="0" data-target="section2">MACHINES</button>
 	</div>
 </div>
 
