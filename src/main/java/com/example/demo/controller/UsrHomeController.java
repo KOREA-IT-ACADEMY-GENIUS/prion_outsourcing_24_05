@@ -24,12 +24,6 @@ public class UsrHomeController {
 		return "/usr/home/about";
 	}
 
-	@RequestMapping("/usr/home/contact")
-	public String showContact() {
-
-		return "/usr/home/contact";
-	}
-
 	@RequestMapping("/usr/home/productService")
 	public String productService() {
 
@@ -47,5 +41,18 @@ public class UsrHomeController {
 
 		return "/usr/home/productService3";
 	}
+	
+	@RequestMapping("/usr/home/workingProcess")
+	public String workingProcess() {
+
+		return "/usr/home/workingProcess";
+	}
+	
+	@RequestMapping("/usr/home/contact")
+	public String showContact() {
+
+		return "/usr/home/contact";
+	}
+
 
 }
