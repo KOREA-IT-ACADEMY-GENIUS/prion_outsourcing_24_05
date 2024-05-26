@@ -147,68 +147,28 @@
 	<hr class="separator">
 	<div class="columns-foot-container">
 		<div class="columns">
+
 			<section class="column">
 				<article class="blocks">
 					<header class="header">
-						<h2 class="header-title">파주공장</h2>
-
+						<span class="address-label" style="font-size: 18px">(주)
+							Prion </span>
 					</header>
 					<div class="address-row">
 						<span class="address-label">Address :</span>
-						<span class="address">경기도 파주시 상지석길 245</span>
+						<span class="address">경기도 파주시 소라지로 23 3층</span>
 					</div>
 					<div class="phone-row">
 						<span class="phone-label">Phone :</span>
-						<span class="phone">(031) 945-1080</span>
-					</div>
-					<div class="fax-row">
-						<span class="fax-label">Fax :</span>
-						<span class="fax">(031) 942-9547</span>
-					</div>
-				</article>
-			</section>
-			<section class="column">
-				<article class="blocks">
-					<header class="header">
-						<h2 class="header-title">서울사무소</h2>
-
-					</header>
-					<div class="address-row">
-						<span class="address-label">Address :</span>
-						<span class="address">서울시 마포구 양화로 81 H스퀘어 L103</span>
-					</div>
-					<div class="phone-row">
-						<span class="phone-label">Phone :</span>
-						<span class="phone">(02) 569-1472</span>
-					</div>
-					<div class="fax-row">
-						<span class="fax-label">Fax :</span>
-						<span class="fax">(02) 569-1571</span>
+						<span class="phone"> 010-7133-4740 / (영업시간을 작성해주세요.) </span>
 					</div>
 					<div class="email-row">
 						<span class="email-label">Email :</span>
-						<span class="email">info@taratps.com</span>
+						<span class="email">(이쪽에 이메일 작성해주세요.)</span>
 					</div>
-				</article>
-			</section>
-			<section class="column">
-				<article class="blocks">
-					<header class="header">
-						<h2 class="header-title">제작 문의</h2>
-
-					</header>
-					<div class="address-row">
-						<span class="address-label">Address :</span>
-						<span class="address">서울시 마포구 양화로 81 H스퀘어 L102</span>
-					</div>
-					<div class="phone-row">
-						<span class="phone-label">Phone :</span>
-						<span class="phone"> 02-6010-8200 / 평일 10-17시(공휴일/점심시간 제외)
-						</span>
-					</div>
-					<div class="email-row">
-						<span class="email-label">Email :</span>
-						<span class="email">tara_online@taragrp.co.kr</span>
+					<div class="fax-row">
+						<span class="fax-label">Fax :</span>
+						<span class="fax">(팩스번호를 입력해주세요)</span>
 					</div>
 				</article>
 			</section>
