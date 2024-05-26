@@ -9,13 +9,13 @@
 
 <style>
 /* 반응형 넓이 */
-@media ( max-width : 768px) {
+@media ( max-width : 991px) {
 	.web-size {
 		display: none;
 	}
 }
 
-@media ( min-width : 769px) {
+@media ( min-width : 991px) {
 	.mobile-size {
 		display: none;
 	}
@@ -62,9 +62,16 @@
 
 /* 세션 페이지 */
 .about-container {
- 	width: 100vw; 
-	height: 700px;
+	width: 100vw;
+	height: 100vh;
 	background-color: #afafaf;
+}
+
+@media ( max-width : 991px) {
+	.about-container {
+		width: 100vw;
+		height: 49vh;
+	}
 }
 
 .about-page {
@@ -128,7 +135,7 @@
 				<button class="btn btn-outline" id="english-btn">English</button>
 			</div>
 			<div id="greeting-div" class="greeting-div">
-				<h1 id="greeting"></h1>
+				<div id="greeting"></div>
 			</div>
 		</div>
 	</section>
@@ -138,8 +145,7 @@
 	<section id="section2" class="about-page">
 		<div class="machine-card-container">
 			<div class="machine-card-items">
-				<div class="machine-card flex"
-					style="border: 2px solid red;">
+				<div class="machine-card flex" style="border: 2px solid red;">
 					<div class="machine-img">
 						<img src="https://picsum.photos/200/300" alt="" />
 					</div>
