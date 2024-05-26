@@ -11,101 +11,100 @@
 /* CSS styles */
 
 /* 반응형 넓이 */
-@media (max-width: 991px) {
-    .web-size {
-        display: none;
-    }
+@media ( max-width : 991px) {
+	.web-size {
+		display: none;
+	}
 }
 
-@media (min-width: 991px) {
-    .mobile-size {
-        display: none;
-    }
+@media ( min-width : 991px) {
+	.mobile-size {
+		display: none;
+	}
 }
 
 /* 상단 타이틀 박스 */
 .title_box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    height: 150px;
-    font-size: 4rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+	height: 150px;
+	font-size: 4rem;
 }
 
 /* about 메뉴바 */
 .about_menubar {
-    height: 100px;
-    font-weight: bold;
-    font-size: 2rem;
-    margin-bottom: 20px; /* 하단 마진 추가 */
+	height: 100px;
+	font-weight: bold;
+	font-size: 2rem;
+	margin-bottom: 20px; /* 하단 마진 추가 */
 }
 
 .about_menubar>ul>li:hover>button {
-    background-color: red;
+	background-color: red;
 }
 
 .custom-container {
-    display: flex;
-    gap: 10px;
-    padding: 20px;
-    text-align: center;
-    font-size: 1.5rem;
-    letter-spacing: -0.05em;
-    flex-wrap: wrap;
-    border-top: 1px solid rgb(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgb(0, 0, 0, 0.1);
-    flex-direction: column;
+	display: flex;
+	gap: 10px;
+	padding: 20px;
+	text-align: center;
+	font-size: 1.5rem;
+	letter-spacing: -0.05em;
+	flex-wrap: wrap;
+	border-top: 1px solid rgb(0, 0, 0, 0.1);
+	border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+	flex-direction: column;
 }
 
 .custom-item {
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    width: 150px;
-    padding-top: 16px;
-    padding-bottom: 16px ;
-    font-weight: 600;
-/*     letter-spacing: 5px; */
+	justify-content: center;
+	align-items: center;
+	max-width: 100%;
+	width: 150px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	font-weight: 600;
+	/*     letter-spacing: 5px; */
 }
 
 /* 세션 페이지 */
 .about-container {
-    width: 100%;
-    height: 100vh;
-    margin-top: 20px; /* 상단 마진 추가 */
-    overflow: hidden;
+	width: 100%;
+	height: 100vh;
+	margin-top: 20px; /* 상단 마진 추가 */
+	overflow: hidden;
 }
 
-@media (max-width: 991px) {
-    .about-container {
-        height: 70vh;
-    }
+@media ( max-width : 991px) {
+	.about-container {
+		height: 70vh;
+	}
 }
 
 .about-page {
-    width: 100%;
-
-    display: none;
+	width: 100%;
+	display: none;
 }
 
 .about-page.active {
-    display: block;
+	display: block;
 }
 
 /* 인사말 화면 */
 .greeting-div {
-    width: 100%;
-    text-align: center;
-    line-height: 1.6;
-    white-space: pre-line;
+	width: 100%;
+	text-align: center;
+	line-height: 1.6;
+	white-space: pre-line;
 }
 
-@media (max-width: 991px) {
-    .greeting-div {
-        height: 1000px;
-    }
+@media ( max-width : 991px) {
+	.greeting-div {
+		height: 1000px;
+	}
 }
 
 /* .greeting {  */
@@ -114,82 +113,78 @@
 
 /* 번역 버튼 */
 .trans-btn {
-    background-color: #ffffff;
-    color: black;
-    padding: 12px 15px;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 5px;
+	background-color: #ffffff;
+	color: black;
+	padding: 12px 15px;
+	text-align: center;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 5px;
 }
 
-.trans-btn:hover { 
-    text-decoration: underline;
-} 
+.trans-btn:hover {
+	text-decoration: underline;
+}
 
 /* 보유 기계 이미지 사진 크기 */
 .fixed-size-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.section1 { 
-    width: 100%;
-    height: 100%;
-} 
-
-@media (max-width: 991px) {
-    .section1 {
-        height: 80%;
-    }
-}
-
-
-.about-title {
-    font-size: 42px;
-    font-family: Pretendard, sans-serif;
-    font-weight: 700;
-}
-
-.btn-box {
-    width: 100%;
-    text-align: center;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 .section1 {
-    text-align: center;
+	width: 100%;
+	height: 100%;
 }
 
-.active-service1, .inactive-service2  {
-position: relative;
+@media ( max-width : 991px) {
+	.section1 {
+		height: 80%;
+	}
 }
 
+.about-title {
+	font-size: 42px;
+	font-family: Pretendard, sans-serif;
+	font-weight: 700;
+}
 
-.active-service1::after, .inactive-service2::after  {
-    content: "";
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: transparent;
-    transition: background-color 0.3s, width 0.3s, color 0.3s;
+.btn-box {
+	width: 100%;
+	text-align: center;
+}
 
+.section1 {
+	text-align: center;
+}
+
+.active-service1, .inactive-service2 {
+	position: relative;
+}
+
+.active-service1::after, .inactive-service2::after {
+	content: "";
+	position: absolute;
+	bottom: -3px;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: transparent;
+	transition: background-color 0.3s, width 0.3s, color 0.3s;
 }
 
 .active-service1:hover::after {
-    width: 100%;
-    background-color: #4dbf5e;
+	width: 100%;
+	background-color: #4dbf5e;
 }
 
 .inactive-service2:hover::after {
-    width: 100%;
-    background-color: #4dbf5e;
+	width: 100%;
+	background-color: #4dbf5e;
 }
-
 </style>
 
 <!-- html -->
@@ -201,14 +196,16 @@ position: relative;
 
 <div class="about_menubar flex justify-center items-center">
 	<div class="custom-container">
-		<button class="custom-item active-service1" tabindex="0" data-target="section1">ABOUT</button>
-		<button class="custom-item inactive-service2" tabindex="0" data-target="section2">MACHINES</button>
+		<button class="custom-item active-service1" tabindex="0"
+			data-target="section1">ABOUT</button>
+		<button class="custom-item inactive-service2" tabindex="0"
+			data-target="section2">MACHINES</button>
 	</div>
 </div>
 
 <div class="about-container">
 	<section id="section1" class="active about-page">
-		<div class="section1" ">
+		<div class="section1"">
 			<div class="btn-box">
 				<button class="trans-btn" id="korean-btn">Korean</button>
 				<button class="trans-btn" id="english-btn">English</button>
@@ -219,42 +216,74 @@ position: relative;
 		</div>
 	</section>
 
-	<section id="section2" class="about-page" >
-		<div class="flex flex-col items-center" style="width: 100%; height: 100%;">
-			<div style="width: 70%; height: 500px; position: relative; text-align: center; margin-bottom: 20px;">
-				<h1 style="position: absolute; width: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #afafaf; padding: 10px;">
+	<section id="section2" class="about-page" style="overflow: auto;">
+		<div class="picture-box flex flex-col items-center"
+			style="width: 100%; height: 100%;">
+			<div
+				style="width: 70%; height: 500px; position: relative; text-align: center; margin-bottom: 20px;">
+				<h1
+					style="position: absolute; width: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(255, 255, 255, 0.5); padding: 10px;">
 					CTP<br>Plate Printer
 				</h1>
-				<img src="https://i.ibb.co/f1DSgzJ/img1.png" alt="" class="fixed-size-image" />
+				<img src="https://i.ibb.co/f1DSgzJ/img1.png" alt=""
+					class="fixed-size-image" />
 			</div>
-			<div style="width: 70%; height: 500px; position: relative; text-align: center; margin-bottom: 20px;">
-				<h1 style="position: absolute; width: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #afafaf; padding: 10px;">
-					1도 디지털 양면 인쇄기 (신도리코)<br>1 color both sided digital printing machinery (Sindoh)
+			<div
+				style="width: 70%; height: 500px; position: relative; text-align: center; margin-bottom: 20px;">
+				<h1
+					style="position: absolute; width: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(255, 255, 255, 0.5); padding: 10px;">
+					1도 디지털 양면 인쇄기 (신도리코)<br>1 color both sided digital printing
+					machinery (Sindoh)
 				</h1>
-				<img src="https://i.ibb.co/f1DSgzJ/img1.png" alt="" class="fixed-size-image" />
+				<img src="https://i.ibb.co/f1DSgzJ/img1.png" alt=""
+					class="fixed-size-image" />
 			</div>
-			<div style="width: 70%; height: 500px; position: relative; text-align: center; margin-bottom: 20px;">
-				<h1 style="position: absolute; width: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #afafaf; padding: 10px;">
-					1도 양면 오프셋 인쇄기<br>1 color both sided offset printing machinery (Akiyama)
+			<div
+				style="width: 70%; height: 500px; position: relative; text-align: center; margin-bottom: 20px;">
+				<h1
+					style="position: absolute; width: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(255, 255, 255, 0.5); padding: 10px;">
+					1도 양면 오프셋 인쇄기<br>1 color both sided offset printing machinery
+					(Akiyama)
 				</h1>
-				<img src="https://i.ibb.co/f1DSgzJ/img1.png" alt="" class="fixed-size-image" />
+				<img src="https://i.ibb.co/f1DSgzJ/img1.png" alt=""
+					class="fixed-size-image" />
 			</div>
-			<div style="width: 70%; height: 500px; position: relative; text-align: center; margin-bottom: 20px;">
-				<h1 style="position: absolute; width: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #afafaf; padding: 10px;">
+			<div
+				style="width: 70%; height: 500px; position: relative; text-align: center; margin-bottom: 20px;">
+				<h1
+					style="position: absolute; width: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(255, 255, 255, 0.5); padding: 10px;">
 					4도 단면 오프셋 인쇄기<br>4 color offset printing machinery (samurai)
 				</h1>
-				<img src="https://i.ibb.co/f1DSgzJ/img1.png" alt="" class="fixed-size-image" />
+				<img src="https://i.ibb.co/f1DSgzJ/img1.png" alt=""
+					class="fixed-size-image" />
 			</div>
-			<div style="width: 70%; height: 500px; position: relative; text-align: center; margin-bottom: 20px;">
-				<h1 style="position: absolute; width: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #afafaf; padding: 10px;">
-					8도 양면 오프셋 인쇄기<br>8 color both sided offset printing machinery (akiyama)
+			<div
+				style="width: 70%; height: 500px; position: relative; text-align: center; margin-bottom: 20px;">
+				<h1
+					style="position: absolute; width: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(255, 255, 255, 0.5); padding: 10px;">
+					8도 양면 오프셋 인쇄기<br>8 color both sided offset printing machinery
+					(akiyama)
 				</h1>
-				<img src="https://i.ibb.co/f1DSgzJ/img1.png" alt="" class="fixed-size-image" />
+				<img src="https://i.ibb.co/f1DSgzJ/img1.png" alt=""
+					class="fixed-size-image" />
 			</div>
 		</div>
 	</section>
-</div>
 
+
+
+</div>
+<style>
+.picture-box h1 {
+	border: none; /* 흰 줄 제거 */
+	opacity: 0; /* 초기 투명도를 0으로 설정하여 숨김 */
+	transition: opacity 0.5s ease; /* 투명도 변화에 대한 transition 효과 */
+}
+
+.picture-box h1:hover {
+	opacity: 0.7; /* 호버 시 투명도 조정 */
+}
+</style>
 <script>
 	/*about 메뉴바안에서 각각의 버튼을 누르면 그에 맞는 section 페이지가 보일수 있도록 만들어주는 기능
 	토글 클래스와 비슷한 기능*/
