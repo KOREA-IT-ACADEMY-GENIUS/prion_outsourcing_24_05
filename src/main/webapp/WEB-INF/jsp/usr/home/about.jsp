@@ -9,132 +9,133 @@
 
 <style>
 /* 반응형 넓이 */
-@media (max-width: 991px) {
-    .web-size {
-        display: none;
-    }
+@media ( max-width : 991px) {
+	.web-size {
+		display: none;
+	}
 }
 
-@media (min-width: 991px) {
-    .mobile-size {
-        display: none;
-    }
+@media ( min-width : 991px) {
+	.mobile-size {
+		display: none;
+	}
 }
 
 /* 상단 타이틀 박스 */
 .title_box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    height: 150px;
-    font-size: 4rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+	height: 150px;
+	font-size: 4rem;
 }
 
 /* about 메뉴바 */
 .about_menubar {
-    height: 100px;
-    font-weight: bold;
-    font-size: 2rem;
-    margin-bottom: 20px; /* 하단 마진 추가 */
+	height: 100px;
+	font-weight: bold;
+	font-size: 2rem;
+	margin-bottom: 20px; /* 하단 마진 추가 */
 }
 
 .about_menubar>ul>li:hover>button {
-    background-color: red;
+	background-color: red;
 }
 
 .custom-container {
-    display: flex;
-    gap: 10px;
-    padding: 20px;
-    text-align: center;
-    font-size: 1.5rem;
-    letter-spacing: -0.05em;
-    flex-wrap: wrap;
+	display: flex;
+	gap: 10px;
+	padding: 20px;
+	text-align: center;
+	font-size: 1.5rem;
+	letter-spacing: -0.05em;
+	flex-wrap: wrap;
 }
 
 .custom-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 16px 64px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    max-width: 100%;
-    width: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 16px 64px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	max-width: 100%;
+	width: 150px;
 }
 
 /* 세션 페이지 */
 .about-container {
-    width: 100vw;
-    height: 100vh;
-    margin-top: 20px; /* 상단 마진 추가 */
+	width: 100vw;
+	height: 100%;
+	margin-top: 20px; /* 상단 마진 추가 */
 }
 
-@media (max-width: 991px) {
-    .about-container {
-        width: 100vw;
-        height: 49vh;
-    }
+@media ( max-width : 991px) {
+	.about-container {
+		width: 100vw;
+		height: 90%;
+	}
 }
 
 .about-page {
-    width: 100vw;
-    height: 100%;
-    display: none;
+	width: 100vw;
+	height: 100%;
+	display: none;
 }
 
 .about-page.active {
-    display: block;
+	display: block;
 }
 
 /* 인사말 화면 */
 .greeting-div {
-    padding: 20px;
-    text-align: center;
-    line-height: 1.6;
-    white-space: pre-line;
+	padding: 20px;
+	text-align: center;
+	line-height: 1.6;
+	white-space: pre-line;
 }
 
 /* 번역 버튼 */
 .trans-btn {
-    background-color: #ffffff;
-/*     border: 1px solid rgba(0, 0, 0, 0.2); */
-    color: black;
-    padding: 12px 15px;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 5px;
+	background-color: #ffffff;
+	/*     border: 1px solid rgba(0, 0, 0, 0.2); */
+	color: black;
+	padding: 12px 15px;
+	text-align: center;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 5px;
 }
 
- .trans-btn:hover { 
-/*      background-color: #afafaf;  */
-/*     color: white;  */
-    text-decoration: underline;
- } 
+.trans-btn:hover {
+	/*      background-color: #afafaf;  */
+	/*     color: white;  */
+	text-decoration: underline;
+}
 
 /* 보유 기계 이미지 사진 크기 */
 .fixed-size-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 #section1 {
-    display: block;
+	display: block;
 }
 
-.about-title{
- font-size: 42px;
- font-family: Pretendard, sans-serif;
- font-weight: 700;
+.about-title {
+	font-size: 42px;
+	font-family: Pretendard, sans-serif;
+	font-weight: 700;
 }
 </style>
 
 <!-- html -->
+
 <div style="height: 80px;"></div>
 
 <div class="title_box">
@@ -151,8 +152,7 @@
 <div class="about-container">
 
 	<section id="section1" class="active about-page">
-		<div class="flex justify-center flex-col"
-			style="width: 100%; height: 100%;">
+		<div class="flex flex-col" style="width: 100%; height: 100%;">
 			<div class="flex flex-row justify-center">
 				<button class="trans-btn" id="korean-btn">Korean</button>
 				<button class="trans-btn" id="english-btn">English</button>
@@ -170,7 +170,9 @@
 				style="width: 70%; height: 500px; position: relative; text-align: center; margin-bottom: 20px;">
 				<h1
 					style="position: absolute; width: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #afafaf; padding: 10px;">
-					CTP<br>Plate Printer
+					CTP
+					<br>
+					Plate Printer
 				</h1>
 				<img src="https://i.ibb.co/f1DSgzJ/img1.png" alt=""
 					class="fixed-size-image" />
@@ -179,8 +181,9 @@
 				style="width: 70%; height: 500px; position: relative; text-align: center; margin-bottom: 20px;">
 				<h1
 					style="position: absolute; width: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #afafaf; padding: 10px;">
-					1도 디지털 양면 인쇄기 (신도리코)<br>1 color both sided digital printing
-					machinery (Sindoh)
+					1도 디지털 양면 인쇄기 (신도리코)
+					<br>
+					1 color both sided digital printing machinery (Sindoh)
 				</h1>
 				<img src="https://i.ibb.co/f1DSgzJ/img1.png" alt=""
 					class="fixed-size-image" />
@@ -189,8 +192,9 @@
 				style="width: 70%; height: 500px; position: relative; text-align: center; margin-bottom: 20px;">
 				<h1
 					style="position: absolute; width: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #afafaf; padding: 10px;">
-					1도 양면 오프셋 인쇄기<br>1 color both sided offset printing machinery
-					(Akiyama)
+					1도 양면 오프셋 인쇄기
+					<br>
+					1 color both sided offset printing machinery (Akiyama)
 				</h1>
 				<img src="https://i.ibb.co/f1DSgzJ/img1.png" alt=""
 					class="fixed-size-image" />
@@ -199,7 +203,9 @@
 				style="width: 70%; height: 500px; position: relative; text-align: center; margin-bottom: 20px;">
 				<h1
 					style="position: absolute; width: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #afafaf; padding: 10px;">
-					4도 단면 오프셋 인쇄기<br>4 color offset printing machinery (samurai)
+					4도 단면 오프셋 인쇄기
+					<br>
+					4 color offset printing machinery (samurai)
 				</h1>
 				<img src="https://i.ibb.co/f1DSgzJ/img1.png" alt=""
 					class="fixed-size-image" />
@@ -208,8 +214,9 @@
 				style="width: 70%; height: 500px; position: relative; text-align: center; margin-bottom: 20px;">
 				<h1
 					style="position: absolute; width: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #afafaf; padding: 10px;">
-					8도 양면 오프셋 인쇄기<br>8 color both sided offset printing machinery
-					(akiyama)
+					8도 양면 오프셋 인쇄기
+					<br>
+					8 color both sided offset printing machinery (akiyama)
 				</h1>
 				<img src="https://i.ibb.co/f1DSgzJ/img1.png" alt=""
 					class="fixed-size-image" />
@@ -217,38 +224,34 @@
 		</div>
 	</section>
 
-
-
-
 </div>
-
 
 <script>
 	/*about 메뉴바안에서 각각의 버튼을 누르면 그에 맞는 section 페이지가 보일수 있도록 만들어주는 기능
 	토글 클래스와 비슷한 기능*/
-	 document.querySelectorAll('.about_menubar button').forEach(button => {
-         button.addEventListener('click', () => {
-        	 //click 즉 button에서 onclick 함수를 주는 행위와 같음
-             const targetId = button.getAttribute('data-target');
-        	 //각각의 버튼에 달린 data-target으로 찾아감
-             
-             // 모든 섹션의 active 클래스를 제거
-             document.querySelectorAll('section').forEach(section => {
-                 section.classList.remove('active');
-             });
-             
-             // 클릭된 버튼과 관련된 섹션에 active 클래스 추가
-             //targetId에 맞는 section 페이지에만 active 클래스를 추가해서 그 페이지만 보이게끔
-             document.getElementById(targetId).classList.toggle('active');
-         });
-     });
-	</script>
+	document.querySelectorAll('.about_menubar button').forEach(button => {
+		button.addEventListener('click', () => {
+			//click 즉 button에서 onclick 함수를 주는 행위와 같음
+			const targetId = button.getAttribute('data-target');
+			//각각의 버튼에 달린 data-target으로 찾아감
+
+			// 모든 섹션의 active 클래스를 제거
+			document.querySelectorAll('section').forEach(section => {
+				section.classList.remove('active');
+			});
+
+			// 클릭된 버튼과 관련된 섹션에 active 클래스 추가
+			//targetId에 맞는 section 페이지에만 active 클래스를 추가해서 그 페이지만 보이게끔
+			document.getElementById(targetId).classList.toggle('active');
+		});
+	});
+</script>
 <script>
 	/*인사말 부분 채팅 애니메이션 효과*/
-document.addEventListener("DOMContentLoaded", function() {
-    const greetingElement = document.getElementById("greeting");
+	document.addEventListener("DOMContentLoaded", function () {
+		const greetingElement = document.getElementById("greeting");
 
-    const koreanContent = `안녕하세요
+		const koreanContent = `안녕하세요
 (주)프리온 대표 김현우입니다.
 프리온은 3대에 걸쳐 64년의 역사를 가진 인쇄소입니다.
 
@@ -276,7 +279,7 @@ since 1961 세신문화(1st Gen) @pil-dong
 SEOUL (주)예원프린팅(2nd Gen) @ILSAN
 (주)프리온 (3rd Gen) ~ NOW @PAJU`;
 
-    const englishContent = `Hello,
+		const englishContent = `Hello,
 This is Hyunwoo Kim, CEO of Prion.
 Prion is a printing company with a 64-year history spanning three generations.
 
@@ -302,34 +305,34 @@ since 1961 세신문화(1st Gen) @pil-dong
 SEOUL (주)예원프린팅(2nd Gen) @ILSAN
 (주)프리온 (3rd Gen) ~ NOW @PAJU`;
 
-    let typingTimeout;
+		let typingTimeout;
 
-    function typeWriter(content) {
-        clearTimeout(typingTimeout);
-        let index = 0;
-        greetingElement.innerHTML = '';
+		function typeWriter(content) {
+			clearTimeout(typingTimeout);
+			let index = 0;
+			greetingElement.innerHTML = '';
 
-        function write() {
-            if (index < content.length) {
-                greetingElement.innerHTML += content.charAt(index);
-                index++;
-                typingTimeout = setTimeout(write, 15); // Adjust the speed as needed
-            }
-        }
-        write();
-    }
+			function write() {
+				if (index < content.length) {
+					greetingElement.innerHTML += content.charAt(index);
+					index++;
+					typingTimeout = setTimeout(write, 15); // Adjust the speed as needed
+				}
+			}
+			write();
+		}
 
-    document.getElementById("korean-btn").addEventListener("click", function() {
-        typeWriter(koreanContent);
-    });
+		document.getElementById("korean-btn").addEventListener("click", function () {
+			typeWriter(koreanContent);
+		});
 
-    document.getElementById("english-btn").addEventListener("click", function() {
-        typeWriter(englishContent);
-    });
+		document.getElementById("english-btn").addEventListener("click", function () {
+			typeWriter(englishContent);
+		});
 
-    // Default to Korean content on page load
-    typeWriter(koreanContent);
-});
+		// Default to Korean content on page load
+		typeWriter(koreanContent);
+	});
 </script>
 
 <%@ include file="../common/foot.jspf"%>

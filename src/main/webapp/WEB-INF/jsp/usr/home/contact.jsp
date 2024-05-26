@@ -427,8 +427,8 @@
 			<section class="section contact-section">
 				<div class="flex-container">
 					<form class="flex-column card gform" method="POST"
-						data-email="yungayeon223@gmail.com"
-						action="https://script.google.com/macros/s/AKfycbyZeKUl8USW8rSUfOIvOPxYlOnwfN53RYPOsl-3R1szgMLNfM4h3swn74aOlFKTdcAAog/exec">
+						data-email="woodkimm23@gmail.com"
+						action="https://script.google.com/macros/s/AKfycbzmIUxKuQJAbW2RPu9dlvtsUFAofB3arUc27o_y_LYck9L_gsMC2O6NPORSr5O8bYjc/exec">
 						<div class="contact-text-bold">Contact Us</div>
 						<p class="text-regular">
 							프리온과 연결되는 순간, 고객님의 아이디어는 우리의 도전이 됩니다.
