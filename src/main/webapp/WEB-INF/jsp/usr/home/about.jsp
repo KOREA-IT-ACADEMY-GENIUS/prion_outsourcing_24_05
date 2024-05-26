@@ -123,9 +123,9 @@
     object-fit: cover;
 }
 
-#section1 {
-    display: block;
-}
+/* #section1 { */
+/*     display: block; */
+/* } */
 
 .about-title{
  font-size: 42px;
