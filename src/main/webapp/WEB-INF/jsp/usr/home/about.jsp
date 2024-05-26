@@ -54,6 +54,9 @@
     font-size: 1.5rem;
     letter-spacing: -0.05em;
     flex-wrap: wrap;
+    border-top: 1px solid rgb(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+    flex-direction: column;
 }
 
 .custom-item {
@@ -61,7 +64,10 @@
     align-items: center;
     max-width: 100%;
     width: 150px;
+    padding-top: 16px;
     padding-bottom: 16px ;
+    font-weight: 600;
+/*     letter-spacing: 5px; */
 }
 
 /* 세션 페이지 */
@@ -102,6 +108,9 @@
     }
 }
 
+/* .greeting {  */
+/*  text-align: center;  */
+/*  }  */
 
 /* 번역 버튼 */
 .trans-btn {
