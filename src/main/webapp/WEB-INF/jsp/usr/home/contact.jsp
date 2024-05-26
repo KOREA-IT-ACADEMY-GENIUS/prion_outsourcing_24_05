@@ -481,24 +481,24 @@
 			<section class="address-section section">
 				<div class="contact-text-bold">Address & Map</div>
 				<p class="address-text">
-					서울시 서초구 청두곶8길 13-5 | P. 02.521.1474 | F. 02.521.1494 |
+					경기도 파주시 소라지로 23 3층 | Tel. 010.7133.4740 |
 					<br />
-					gomgom2@designzip.co.kr
+					(이쪽에 이메일 작성해주세요.)
 					<br />
-					13-5, Cheongdugot 8-gil, Seocho-gu, Seoul, Republic of Korea, 0667
+					23, Soraji-ro, Paju-si, Gyeonggi-do, Republic of Korea
 				</p>
 				<div class="map_wrap">
 					<div id="map"></div>
 				</div>
 				<div class="to-way">To Way</div>
 				<p class="instructions">
-					지하철 4호선 사당역 11 번 출구에서 250M 직진 후 우회전.
+					(가까운 역 또는 정류장을 통해 오시는 길을 작성해주세요.)
 					<br />
-					우회전 후, 300M 직진(방배노인종합복지관, 청두어린이공원 지남).
+					(가까운 역 또는 정류장을 통해 오시는 길을 작성해주세요.)
 					<br />
-					나이스빌을 끼고 좌회전.
+					(가까운 역 또는 정류장을 통해 오시는 길을 작성해주세요.)
 					<br />
-					뜰안채 좌측 건물, 도보 7~8분
+					(가까운 역 또는 정류장을 통해 오시는 길을 작성해주세요.)
 				</p>
 			</section>
 		</div>
@@ -516,14 +516,19 @@
 
 	var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
 	mapOption = {
-		center : new kakao.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표
+		center : new kakao.maps.LatLng(37.733172, 126.708343), // 지도의 중심좌표
 		level : 3
 	// 지도의 확대 레벨
 	};
 
 	// 지도를 생성합니다    
 	var map = new kakao.maps.Map(mapContainer, mapOption);
-
+	var markerPosition = new kakao.maps.LatLng(37.733172, 126.708343);
+	// 마커를 생성합니다
+	var marker = new kakao.maps.Marker({
+		position : markerPosition
+	});
+	marker.setMap(map);
 	// 마커를 생성하고 지도 위에 마커를 표시하는 함수입니다
 	function addMarker(position, idx, title) {
 		var imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_number_blue.png', // 마커 이미지 url, 스프라이트 이미지를 씁니다
