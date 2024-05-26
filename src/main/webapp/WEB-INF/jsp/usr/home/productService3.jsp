@@ -78,20 +78,6 @@
       height: 2px;
     }
 
-/*     .fpublication-heading { */
-/*       color: #000; */
-/*       text-align: center; */
-/*       letter-spacing: -1.26px; */
-/*       margin-top: 72px; */
-/*       font: 700 32px Pretendard, sans-serif; */
-/*     } */
-
-/*     @media (max-width: 991px) { */
-/*       .publication-heading { */
-/*         margin-top: 40px; */
-/*       } */
-/*     } */
-
 .publication-types {
 align-self: stretch;
 display: flex;
@@ -227,23 +213,10 @@ justify-content: flex-start;
     
 }
 
-
-/* 수정 필요 */
-
 .inactive-service3 {
  color:black;
 }
 
-/* .active-service1::after { */
-/*  width: 100%;  */
-/*  content: ""; */
-/*  position: absolute;  */
-/*  bottom: -3px;  */
-/*  left: 0;  */
-/*  width: 0;  */
-/*  height: 3px; */
-/*  background-color: #4dbf5e; */
-/*  } */
 
 .active-service1::after, .inactive-service2::after  {
 
@@ -257,12 +230,6 @@ justify-content: flex-start;
     transition: background-color 0.3s, width 0.3s;
 
 }
-
-/* .active-service1:hover::after { */
-/*     width: 100%; */
-/*     background-color: #4dbf5e; */
-/*     color:black; */
-/* } */
 
 .inactive-service2:hover::after {
     width: 100%;

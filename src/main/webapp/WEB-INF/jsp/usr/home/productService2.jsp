@@ -78,20 +78,6 @@
       height: 2px;
     }
 
-/*     .fpublication-heading { */
-/*       color: #000; */
-/*       text-align: center; */
-/*       letter-spacing: -1.26px; */
-/*       margin-top: 72px; */
-/*       font: 700 32px Pretendard, sans-serif; */
-/*     } */
-
-/*     @media (max-width: 991px) { */
-/*       .publication-heading { */
-/*         margin-top: 40px; */
-/*       } */
-/*     } */
-
     .publication-types {
       align-self: stretch;
       display: flex;
