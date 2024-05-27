@@ -78,22 +78,23 @@
       height: 2px;
     }
 
-    .publication-types {
-      align-self: stretch;
-      display: flex;
-      margin-top: 73px;
-      gap: 10px;
-      font-size: 23px;
-      color: rgba(0, 0, 0, 0.4);
-      font-weight: 400;
-      text-align: center;
-      letter-spacing: -0.72px;
-      line-height: 236%;
-      justify-content: space-between;
+.publication-types {
+align-self: stretch;
+display: flex;
+margin-top: 73px;
+gap: 10px;
+font-size: 23px;
+color: rgba(0, 0, 0, 0.4);
+font-weight: 400;
+text-align: center;
+letter-spacing: -0.72px;
+line-height: 236%;
+justify-content: flex-start;
     }
 
     @media (max-width: 991px) {
       .publication-types {
+      flex-direction: column;
         max-width: 100%;
         flex-wrap: wrap;
         margin-top: 40px;
@@ -106,7 +107,7 @@
       border-color: rgba(0, 0, 0, 0.2);
       border-style: solid;
       border-width: 1px;
-      width: 500px;
+      width: 210px;
       height: 55px;
       text-align: center;
       background-color: #fff;
@@ -121,8 +122,9 @@
 
     @media (max-width: 991px) {
       .publication-button {
-        max-width: 100%;
-        padding: 0 20px;
+      	width: 500px;
+/*         max-width: 100%; */
+         padding: 0 20px;
         margin-left: auto;
         margin-right: auto;
       }
@@ -209,12 +211,12 @@
     
 }
 
-
-.active-service1 {
+.inactive-service3 {
  color:black;
 }
 
-.inactive-service2::after, .inactive-service3::after {
+
+.active-service1::after, .inactive-service2::after  {
 
     content: "";
     position: absolute;
@@ -226,7 +228,6 @@
     transition: background-color 0.3s, width 0.3s;
 
 }
-
 
 .inactive-service2:hover::after {
     width: 100%;
@@ -288,25 +289,9 @@ img {
     z-index: 10000;
     
 }
-
-
 span img:hover{
     cursor: -webkit-zoom-in;
 }
-
-@media (max-width: 768px) {
-      .modalBox {
-    position: relative;
-    text-align: center;
-    top : 50%;
-    left: 50%;
-    width: 90%;
-    max-height: 50%; 
-    position : sticky;
-    z-index: 10000;
-    transform:translate(-5%, -50%);
-      }
-    }
 
 
   </style>
@@ -382,21 +367,16 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="content-container">
     <h1 class="heading">PRODUCT/SERVICE</h1>
     <div class="service-options">
-    <a href="/usr/home/productService" class="active-service1"><div class="tab-1" id="tab">인쇄출판<div class="bottom-bar" style="width : 130px"></div></div></a>
+    <a href="/usr/home/productService" class="active-service1"><div class="tab-1" id="tab">인쇄출판</div></a>
 <a href="/usr/home/productService2" class="inactive-service2"><div class="tab-2" id="tab">시즌제작물</div></a>
-<a href="/usr/home/productService3" class="inactive-service3"><div class="tab-3" id="tab">봉투</div></a>
+<a href="/usr/home/productService3" class="inactive-service3"><div class="tab-3" id="tab">봉투<div class="bottom-bar" style="width : 130px"></div></div></a>
 
     </div>
     <div class="publication-types">
-      <button class="publication-button active section1-button">환양장책</button>
-      <button class="publication-button section2-button">각양장책</button>
-      <button class="publication-button section3-button">소프트양장책</button>
-      <button class="publication-button section4-button">무선</button>
-      <button class="publication-button section5-button">잡지</button>
-      <button class="publication-button section6-button">카탈로그</button>
+      <button class="publication-button active section1-button">봉투</button>
+      <button class="publication-button section2-button">종이박스</button>
     </div>
 
-<!-- 	이미지 넣을곳!!! -->
     <div id="section1">
     <div class="image-gallery">
       <div class="image-row">
@@ -488,188 +468,6 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
     </div>
     
-    
-    <div id="section3">
-    <div class="image-gallery">
-      <div class="image-row">
-        <div class="image-column">
-          <div class="image-wrapper">
-            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image img" />
-            <div class="image-description">텍스트13</div>
-          </div>
-        </div>
-        <div class="image-column">
-          <div class="image-wrapper">
-            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image img" />
-            <div class="image-description">텍스트14</div>
-          </div>
-        </div>
-        <div class="image-column">
-          <div class="image-wrapper">
-            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image img" />
-            <div class="image-description">텍스트15</div>
-          </div>
-        </div>
-        </div>
-        <div class="image-row">
-      <div class="image-column">
-          <div class="image-wrapper">
-            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image img" />
-            <div class="image-description">텍스트16</div>
-          </div>
-        </div>
-        <div class="image-column">
-          <div class="image-wrapper">
-            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image img" />
-            <div class="image-description">텍스트17</div>
-          </div>
-        </div>
-        <div class="image-column">
-          <div class="image-wrapper">
-            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image img" />
-            <div class="image-description">텍스트18</div>
-          </div>
-        </div>
-      </div>
-      </div>
-    </div>
-    
-    <div id="section4">
-    <div class="image-gallery">
-      <div class="image-row">
-        <div class="image-column">
-          <div class="image-wrapper">
-            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image img" />
-            <div class="image-description">텍스트19</div>
-          </div>
-        </div>
-        <div class="image-column">
-          <div class="image-wrapper">
-            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image img" />
-            <div class="image-description">텍스트20</div>
-          </div>
-        </div>
-        <div class="image-column">
-          <div class="image-wrapper">
-            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image img" />
-            <div class="image-description">텍스트21</div>
-          </div>
-        </div>
-      </div>
-      <div class="image-row">
-      <div class="image-column">
-          <div class="image-wrapper">
-            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image img" />
-            <div class="image-description">텍스트22</div>
-          </div>
-        </div>
-        <div class="image-column">
-          <div class="image-wrapper">
-            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image img" />
-            <div class="image-description">텍스트23</div>
-          </div>
-        </div>
-        <div class="image-column">
-          <div class="image-wrapper">
-            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image img" />
-            <div class="image-description">텍스트24</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-    
-    
-    <div id="section5"><div class="image-gallery">
-      <div class="image-row">
-        <div class="image-column">
-          <div class="image-wrapper">
-            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image img" />
-            <div class="image-description">텍스트25</div>
-          </div>
-        </div>
-        <div class="image-column">
-          <div class="image-wrapper">
-            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image img" />
-            <div class="image-description">텍스트26</div>
-          </div>
-        </div>
-        <div class="image-column">
-          <div class="image-wrapper">
-            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image img" />
-            <div class="image-description">텍스트27</div>
-          </div>
-        </div>
-      </div>
-      <div class="image-row">
-      <div class="image-column">
-          <div class="image-wrapper">
-            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image img" />
-            <div class="image-description">텍스트28</div>
-          </div>
-        </div>
-        <div class="image-column">
-          <div class="image-wrapper">
-            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image img" />
-            <div class="image-description">텍스트29</div>
-          </div>
-        </div>
-        <div class="image-column">
-          <div class="image-wrapper">
-            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image img" />
-            <div class="image-description">텍스트30</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-    
-        
-    <div id="section6"><div class="image-gallery">
-      <div class="image-row">
-        <div class="image-column">
-          <div class="image-wrapper">
-            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image img" />
-            <div class="image-description">텍스트31</div>
-          </div>
-        </div>
-        <div class="image-column">
-          <div class="image-wrapper">
-            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image img" />
-            <div class="image-description">텍스트32</div>
-          </div>
-        </div>
-        <div class="image-column">
-          <div class="image-wrapper">
-            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image img" />
-            <div class="image-description">텍스트33</div>
-          </div>
-        </div>
-      </div>
-      <div class="image-row">
-      <div class="image-column">
-          <div class="image-wrapper">
-            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image img" />
-            <div class="image-description">텍스트34</div>
-          </div>
-        </div>
-        <div class="image-column">
-          <div class="image-wrapper">
-            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image img" />
-            <div class="image-description">텍스트35</div>
-          </div>
-        </div>
-        <div class="image-column">
-          <div class="image-wrapper">
-            <img loading="lazy" src="https://i.ibb.co/4jfypNw/Frame-4.png" alt="이미지 설명" class="image img" />
-            <div class="image-description">텍스트36</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-</div>
-
 <div class="modal">
     <div class="modalBox"></div>
 </div>

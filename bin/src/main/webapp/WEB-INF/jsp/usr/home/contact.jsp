@@ -491,7 +491,7 @@
 				<div class="map_wrap">
 					<div id="map"></div>
 				</div>
-				<div class="to-way">Way to Prion</div>
+				<div class="to-way">To Way</div>
 				<p class="instructions">
 					(가까운 역 또는 정류장을 통해 오시는 길을 작성해주세요.)
 					<br />

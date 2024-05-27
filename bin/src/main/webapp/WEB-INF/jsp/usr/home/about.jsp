@@ -55,7 +55,7 @@
 	font-size: 1.5rem;
 	letter-spacing: -0.05em;
 	flex-wrap: wrap;
-/* 	border-top: 1px solid rgb(0, 0, 0, 0.1); */
+	border-top: 1px solid rgb(0, 0, 0, 0.1);
 	border-bottom: 1px solid rgb(0, 0, 0, 0.1);
 	flex-direction: column;
 }
@@ -162,7 +162,8 @@ hr {
 	width: 90%;
 	height: 50px;
 	margin-top: 0;
-	border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+	border-bottom: 1px solid #1f1209;
+	box-shadow: 0 20px 20px -20px #333;
 	margin: -50px auto 10px;
 }
 </style>
@@ -189,8 +190,8 @@ hr {
 	<section class="about1-main">
 		<div class=""">
 			<div class="btn-box" style="text-align: center;">
-				<div class="trans-btn" id="korean-btn">Korean</div>
-				<div class="trans-btn" id="english-btn">English</div>
+				<button class="trans-btn" id="korean-btn">Korean</button>
+				<button class="trans-btn" id="english-btn">English</button>
 			</div>
 			<div id="greeting-div" class="greeting-div">
 				<div class="greeting" id="greeting"></div>
@@ -208,11 +209,11 @@ hr {
 				style="position: absolute; width: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(255, 255, 255, 0.5); padding: 10px;">
 				CTP<br>Plate Printer
 			</h1>
-	<!-- 	이미지 넣을곳!!! -->
 			<img src="https://i.ibb.co/f1DSgzJ/img1.png" alt="" class="fixed-size-image" />
 		</div>
 		<!--h1 부분에 CTP / Plate Printer 이렇게 하나의 세트로 보고 한국어 영어로 입력
-		<br>이 줄 바꿈을 해주므로 <br> 태그 양옆으로 '한국어<br>영어' 의 방식으로 기계이름을 적으면 됩니다.		  -->
+		<br>이 줄 바꿈을 해주니까 양옆으로 적는다
+		  -->
 		<!--여기까지 하나의 틀  -->
 		<div class="machine-item"
 			style="width: 70%; height: 500px; position: relative; text-align: center; margin-bottom: 20px;">
@@ -245,7 +246,6 @@ hr {
 				8도 양면 오프셋 인쇄기<br>8 color both sided offset printing machinery (akiyama)
 			</h1>
 			<img src="https://i.ibb.co/f1DSgzJ/img1.png" alt="" class="fixed-size-image" />
-<!-- 			여기까지 이미지 넣을 부분 -->
 		</div>
 	</div>
 </div>
@@ -304,7 +304,6 @@ document.querySelectorAll('.about_menubar button').forEach(button => {
 		
 		
 		// 영어 소개말 그냥 번역기만 돌려서 임시처리
-		// 	백틱 안쪽 부분 수정하면 문구 수정됩니다.
 		const englishContent = `Hello,
 		This is Hyunwoo Kim, CEO of Prion.
 		Prion is a printing company with a 64-year history spanning three generations.

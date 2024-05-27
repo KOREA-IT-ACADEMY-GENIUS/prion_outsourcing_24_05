@@ -396,7 +396,6 @@ document.addEventListener("DOMContentLoaded", function() {
       <button class="publication-button section6-button">카탈로그</button>
     </div>
 
-<!-- 	이미지 넣을곳!!! -->
     <div id="section1">
     <div class="image-gallery">
       <div class="image-row">

@@ -1,0 +1,180 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<style>
+.foot-container {
+	justify-content: center;
+	background-color: #242e26;
+	display: flex;
+	flex-direction: column;
+	padding: 40px 20px 40px;
+	width: 100%;
+}
+
+.title {
+	color: #fff;
+	letter-spacing: -0.96px;
+	margin-top: 11px;
+	font: 400 32px/150% Playfair Display, -apple-system, Roboto, Helvetica,
+		sans-serif;
+}
+
+@media ( max-width : 991px) {
+	.title {
+		max-width: 100%;
+	}
+}
+
+.separator {
+	background-color: #e1d3bf;
+	margin-top: 23px;
+	height: 1px;
+}
+
+@media ( max-width : 991px) {
+	.separator {
+		max-width: 100%;
+	}
+}
+
+.columns-foot-container {
+	margin-top: 30px;
+}
+
+@media ( max-width : 991px) {
+	.columns-foot-container {
+		max-width: 100%;
+		padding-right: 20px;
+	}
+}
+
+.columns {
+	gap: 20px;
+	display: flex;
+}
+
+@media ( max-width : 991px) {
+	.columns {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 0px;
+	}
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	line-height: normal;
+	width: 33%;
+	margin-left: 0px;
+}
+
+@media ( max-width : 991px) {
+	.column {
+		width: 100%;
+	}
+}
+
+.blocks {
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+	line-height: 150%;
+}
+
+@media ( max-width : 991px) {
+	.blocks {
+		margin-top: 40px;
+	}
+}
+
+.header {
+	display: flex;
+	gap: 14px;
+	color: #fff;
+}
+
+.header-title {
+	letter-spacing: 0.64px;
+	flex-grow: 1;
+	margin: auto 0;
+	font: 400 14px Play, sans-serif;
+}
+
+.header-subtitle {
+	justify-content: center;
+	border-radius: 20px;
+	border-color: rgba(255, 255, 255, 0.8);
+	border-style: solid;
+	border-width: 1px;
+	letter-spacing: -0.36px;
+	padding: 9px 16px;
+	font: 200 12px Pretendard, sans-serif;
+}
+
+.address-row, .phone-row, .fax-row, .email-row {
+	display: flex;
+	margin-top: 21px;
+	gap: 11px;
+}
+
+.address-label, .phone-label, .fax-label, .email-label {
+	color: rgba(255, 255, 255, 0.7);
+	font: 400 14px Pretendard, sans-serif;
+}
+
+.address, .phone, .fax, .email {
+	color: rgba(255, 255, 255, 0.5);
+	flex-grow: 1;
+	font: 200 13px Pretendard, sans-serif;
+}
+
+.copyright {
+	color: rgba(255, 255, 255, 0.5);
+	letter-spacing: -0.42px;
+	margin-top: 66px;
+	font: 300 14px Pretendard, sans-serif;
+}
+
+@media ( max-width : 500px) {
+	.copyright {
+		margin-top: 40px;
+	}
+}
+</style>
+<div class="foot-container">
+	<section class="title">Contact Info</section>
+	<hr class="separator">
+	<div class="columns-foot-container">
+		<div class="columns">
+
+			<section class="column">
+				<article class="blocks">
+					<header class="header">
+						<span class="address-label" style="font-size: 18px">(주)
+							Prion </span>
+					</header>
+					<div class="address-row">
+						<span class="address-label">Address :</span>
+						<span class="address">경기도 파주시 소라지로 23 3층</span>
+					</div>
+					<div class="phone-row">
+						<span class="phone-label">Phone :</span>
+						<span class="phone"> 010-7133-4740 / (영업시간을 작성해주세요.) </span>
+					</div>
+					<div class="email-row">
+						<span class="email-label">Email :</span>
+						<span class="email">(이쪽에 이메일 작성해주세요.)</span>
+					</div>
+					<div class="fax-row">
+						<span class="fax-label">Fax :</span>
+						<span class="fax">(팩스번호를 입력해주세요)</span>
+					</div>
+				</article>
+			</section>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

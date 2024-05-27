@@ -205,17 +205,18 @@
     }
 
 .active-service1, .inactive-service2, .inactive-service3 {
+
     position: relative;
     
 }
 
+.inactive-service2 {
 
-.active-service1 {
  color:black;
+ 
 }
 
-.inactive-service2::after, .inactive-service3::after {
-
+.active-service1::after, .inactive-service3::after {
     content: "";
     position: absolute;
     bottom: -3px;
@@ -224,11 +225,9 @@
     height: 2px;
     background-color: transparent;
     transition: background-color 0.3s, width 0.3s;
-
 }
 
-
-.inactive-service2:hover::after {
+.active-service1:hover::after {
     width: 100%;
     background-color: #4dbf5e;
     color:black;
@@ -264,7 +263,6 @@ img {
   object-fit: cover;
 }
 
-  
   /* 모달창 */
   
 	.modal {
@@ -288,25 +286,9 @@ img {
     z-index: 10000;
     
 }
-
-
 span img:hover{
     cursor: -webkit-zoom-in;
 }
-
-@media (max-width: 768px) {
-      .modalBox {
-    position: relative;
-    text-align: center;
-    top : 50%;
-    left: 50%;
-    width: 90%;
-    max-height: 50%; 
-    position : sticky;
-    z-index: 10000;
-    transform:translate(-5%, -50%);
-      }
-    }
 
 
   </style>
@@ -382,21 +364,20 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="content-container">
     <h1 class="heading">PRODUCT/SERVICE</h1>
     <div class="service-options">
-    <a href="/usr/home/productService" class="active-service1"><div class="tab-1" id="tab">인쇄출판<div class="bottom-bar" style="width : 130px"></div></div></a>
-<a href="/usr/home/productService2" class="inactive-service2"><div class="tab-2" id="tab">시즌제작물</div></a>
+    <a href="/usr/home/productService" class="active-service1"><div class="tab-1" id="tab">인쇄출판</div></a>
+<a href="/usr/home/productService2" class="inactive-service2"><div class="tab-2" id="tab">시즌제작물<div class="bottom-bar" style="width : 130px"></div></div></a>
 <a href="/usr/home/productService3" class="inactive-service3"><div class="tab-3" id="tab">봉투</div></a>
 
     </div>
     <div class="publication-types">
-      <button class="publication-button active section1-button">환양장책</button>
-      <button class="publication-button section2-button">각양장책</button>
-      <button class="publication-button section3-button">소프트양장책</button>
-      <button class="publication-button section4-button">무선</button>
-      <button class="publication-button section5-button">잡지</button>
-      <button class="publication-button section6-button">카탈로그</button>
+      <button class="publication-button active section1-button">탁상 달력</button>
+      <button class="publication-button section2-button">벽걸이 달력</button>
+      <button class="publication-button section3-button">링 다이어리</button>
+      <button class="publication-button section4-button">양장 다이어리</button>
+      <button class="publication-button section5-button">스프링 다이어리</button>
+      <button class="publication-button section6-button">친환경 다이어리</button>
     </div>
 
-<!-- 	이미지 넣을곳!!! -->
     <div id="section1">
     <div class="image-gallery">
       <div class="image-row">
