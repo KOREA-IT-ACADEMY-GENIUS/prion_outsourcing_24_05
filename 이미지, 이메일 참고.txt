@@ -1,0 +1,18 @@
+프로젝트에 이미지 넣을곳!!! 이라고 검색(ctrl + h, file search) 하시면 그 부분부터 이미지 삽입 하시면 됩니다.
+
+about 페이지의 machines(보유 기계 소개)
+about.jsp 211번째 줄 부터 <img> 태그 안에 src를 바꾸면 됩니다.
+
+productService 페이지는 jsp가 3개 입니다. 
+productService.jsp , productService 2.jsp, productService 3.jsp
+각 jsp 의 image-column class를 찾은 후 <img> 태그 안에 src를 바꾸면 됩니다.
+
+
+workingProcess 페이지 346번째 줄 부터 <img> 태그 안에 src를 바꾸면 됩니다.
+'기획 관련 이미지 URL 입력' 처럼 ~관련 이미지 주석 달아놨습니다. 확인 바랍니다.
+
+=======================================================
+
+contact 페이지 address & map 부분
+contact.jsp 487번째 줄 이메일 작성 해주세요, 496번째 줄부터 오시는 길 작성 해주세요
+511번째 줄 카카오 API키가 작업자의 것으로 되어 있으니, 변경하셔야 합니다.

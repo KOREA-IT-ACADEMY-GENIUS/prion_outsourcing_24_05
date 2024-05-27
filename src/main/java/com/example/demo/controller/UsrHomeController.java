@@ -3,8 +3,6 @@ package com.example.demo.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.example.demo.util.crawlTest;
-
 @Controller
 public class UsrHomeController {
 
@@ -20,11 +18,41 @@ public class UsrHomeController {
 		return "redirect:/usr/home/main";
 	}
 
-	@RequestMapping("/usr/crawl")
-	public String doCrawl() {
+	@RequestMapping("/usr/home/about")
+	public String about() {
 
-		crawlTest.crawl();
-
-		return "redirect:/usr/home/main";
+		return "/usr/home/about";
 	}
+
+	@RequestMapping("/usr/home/productService")
+	public String productService() {
+
+		return "/usr/home/productService";
+	}
+	
+	@RequestMapping("/usr/home/productService2")
+	public String productService2() {
+
+		return "/usr/home/productService2";
+	}
+	
+	@RequestMapping("/usr/home/productService3")
+	public String productService3() {
+
+		return "/usr/home/productService3";
+	}
+	
+	@RequestMapping("/usr/home/workingProcess")
+	public String workingProcess() {
+
+		return "/usr/home/workingProcess";
+	}
+	
+	@RequestMapping("/usr/home/contact")
+	public String showContact() {
+
+		return "/usr/home/contact";
+	}
+
+
 }
